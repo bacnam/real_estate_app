@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.NewsDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HeightRequest="40" Margin="20,24,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0" Margin="0"
+                             WidthRequest="40" Source="back"
+                             Clicked="onBack"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"></ImageButton>
+                <ImageButton Grid.Column="2" Padding="0"
+                             Clicked="onShare" Margin="0"
+                             WidthRequest="40" VerticalOptions="Center"
+                             HorizontalOptions="End" Source="share"></ImageButton>
+            </Grid>
+            <StackLayout Margin="0" Padding="0,0" VerticalOptions="FillAndExpand">
+                <WebView Source="{Binding News.ContentHtml}" VerticalOptions="FillAndExpand"></WebView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

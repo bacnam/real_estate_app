@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             x:Class="RealEstate.Views.RegisterReceiveNewsStep2Page">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Spacing="0" Padding="0"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <ImageButton Grid.Column="0" Padding="0"
+                             Margin="20,24,0,0"
+                             Clicked="onBack" WidthRequest="40"
+                             HeightRequest="40"
+                             Source="back"
+                                 HorizontalOptions="Start" VerticalOptions="Center"></ImageButton>
+                <StackLayout Margin="10,20,10,0">
+                    <Label Text="Nhập Email nhận tin:" TextColor="#626B70"
+                           FontSize="16" Margin="0,0,0,20"></Label>
+                    <renderers:NoBorderEntry HeightRequest="44" FontSize="14"
+                                             Text="{Binding RegisterNews.Email}"
+                                             BackgroundColor="#F6F6F6" TextColor="#A9A9BA"
+                                             Placeholder="Địa chỉ Email"></renderers:NoBorderEntry>
+                </StackLayout>
+                <Button BackgroundColor="#FC9261"
+                        VerticalOptions="EndAndExpand"
+                        Margin="10,0,10,20"
+                        TextColor="#FFFFFF"
+                        FontSize="16"
+                        Clicked="onRegister"
+                        Text="Đăng ký">
+
+                </Button>
+            </StackLayout>
+            <StackLayout BackgroundColor="Black" Opacity="0.4"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         IsVisible="{Binding IsBusy}"
+                         VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="#FC9261" IsRunning="{Binding IsBusy}"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"></ActivityIndicator>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.NotificationPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <ImageButton Padding="0" WidthRequest="40" HeightRequest="40"
+                         Source="back"
+                         Clicked="onBack" Margin="20,24,0,10"
+                         HorizontalOptions="Start" VerticalOptions="Center"></ImageButton>
+            <StackLayout Margin="10,10,10,0"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand">
+                <Label Text="Thông báo" TextColor="#363636" FontSize="14" HeightRequest="34"></Label>
+                <ListView ItemsSource="{Binding Notifications}"
+                          ItemSelected="onItemSelected"
+                          SeparatorColor="Transparent" RowHeight="153">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Spacing="0" Margin="0,10">
+                                    <Frame BorderColor="#E7ECEE" HasShadow="False"
+                                           Padding="10">
+                                        <Grid ColumnSpacing="0" RowSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="70"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="34"></RowDefinition>
+                                                <RowDefinition Height="55"></RowDefinition>
+                                                <RowDefinition Height="24"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Frame Grid.Column="0" Grid.Row="0"
+                                                   Padding="0" Margin="7" CornerRadius="10"
+                                                   HasShadow="False"
+                                                   BackgroundColor="{Binding NotificationTypeColor}">
+                                                <Label Padding="0" FontSize="9"
+                                                       Text="{Binding NotificationType}"
+                                                       BackgroundColor="Transparent"
+                                                       VerticalTextAlignment="Center"
+                                                       HorizontalTextAlignment="Center"
+                                                       TextColor="#FFFFFF"></Label>
+                                            </Frame>
+                                            <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"
+                                                   Text="{Binding Time, StringFormat='{0:dd-MM-yyyy HH:mm:ss}'}" FontSize="11"
+                                                   TextColor="#363636" HorizontalTextAlignment="Start"
+                                                   VerticalTextAlignment="Center"></Label>
+                                            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                                                   Text="{Binding Title}"
+                                                   Margin="0,10"
+                                                   LineBreakMode="TailTruncation"
+                                                   MaxLines="2"
+                                                   TextColor="#71828A"
+                                                   FontSize="13"></Label>
+                                            <Label Grid.Column="2" Grid.Row="2"
+                                                    VerticalOptions="Center"
+                                                    HorizontalOptions="End"
+                                                    BackgroundColor="White" TextColor="#71828A"
+                                                    Text="..." FontSize="20"></Label>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

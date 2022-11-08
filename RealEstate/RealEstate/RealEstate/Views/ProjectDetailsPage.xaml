@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             x:Class="RealEstate.Views.ProjectDetailsPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <ListView Margin="0,-20,0,0"
+                          VerticalOptions="FillAndExpand"
+                          RowHeight="230" SeparatorColor="Transparent"
+                          IsPullToRefreshEnabled="True"
+                        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                        RefreshControlColor="Transparent"
+                        ItemTapped="onSelected"
+                        RefreshCommand="{Binding LoadMoreCommand}"
+                        ItemsSource="{Binding Reals}">
+                    <ListView.Header>
+                        <StackLayout>
+                            <Image Source="{Binding Project.Thumbnail}"
+                                    BackgroundColor="White" HeightRequest="380"
+                                    Margin="0" VerticalOptions="Start"
+                                    Aspect="AspectFill"></Image>
+                            <StackLayout Orientation="Horizontal" Padding="0,10,0,20">
+                                <StackLayout Spacing="0" Padding="20,0" BackgroundColor="White">
+                                    <Label BackgroundColor="White" TextColor="#626B70"
+                                            x:Name="lblSale"
+                                            Text="Chi tiết dự án"></Label>
+                                    <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
+                                                x:Name="lineSale"
+                                                HorizontalOptions="Start"></BoxView>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="onSale"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <StackLayout Padding="0" Spacing="0">
+                                    <Label BackgroundColor="White" TextColor="#88969D"
+                                            x:Name="lblLease"
+                                            Text="Tin rao"></Label>
+                                    <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
+                                                IsVisible="False" x:Name="lineLease"
+                                                HorizontalOptions="Start"></BoxView>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="onLease"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </StackLayout>
+                            <Label Text="{Binding RealCount, StringFormat='Có {0:F0} tin rao về dự án này'}"
+                                       Margin="20,10" IsVisible="{Binding IsReal}"
+                                       TextColor="#363636" FontSize="14"
+                                       FontAttributes="Bold"></Label>
+                            <StackLayout IsVisible="{Binding IsDetails}">
+                                <Grid Padding="20,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="5"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="5"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="60"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"></RowDefinition>
+                                        <RowDefinition Height="25"></RowDefinition>
+                                        <RowDefinition Height="25"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5"
+                                            TextColor="#00A344" FontSize="16" FontAttributes="Bold"
+                                            Text="{Binding Project.Name}"></Label>
+                                    <ImageButton Grid.Column="5" Grid.Row="0" Grid.RowSpan="2"
+                                                    Padding="5"
+                                                    Source="map"></ImageButton>
+                                    <Label Grid.Column="0" Grid.Row="1"
+                                            VerticalTextAlignment="Center"
+                                            HorizontalTextAlignment="Start"
+                                            FontSize="14" FontAttributes="Bold"
+                                            Text="{Binding Project.Acreage, StringFormat='{0:F0} m2'}" TextColor="#363636"></Label>
+                                    <Label Grid.Column="1" Grid.Row="1"
+                                            Text="." TextColor="#929EA3" FontSize="14"></Label>
+                                    <Label Grid.Column="2" Grid.Row="1"
+                                            VerticalTextAlignment="Center"
+                                            HorizontalTextAlignment="Center"
+                                            FontSize="14" FontAttributes="Bold"
+                                            Text="{Binding Project.Floor, StringFormat='{0:F0} tầng'}" TextColor="#363636"></Label>
+                                    <Label Grid.Column="3" Grid.Row="1"
+                                            VerticalTextAlignment="Start"
+                                            Text="." TextColor="#929EA3" FontSize="14"></Label>
+                                    <Label Grid.Column="4" Grid.Row="1"
+                                            VerticalTextAlignment="Center"
+                                            HorizontalTextAlignment="Center"
+                                            FontSize="14" FontAttributes="Bold"
+                                            Text="{Binding Project.ApartmentNumber, StringFormat='{0:F0} căn'}" TextColor="#363636"></Label>
+                                    <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6"
+                                            TextColor="#77858C" FontSize="13"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding Project.Address}"></Label>
+                                </Grid>
+                                <BoxView HeightRequest="2" Margin="20,10"
+                                            BackgroundColor="#F5F5F7"></BoxView>
+                                <StackLayout Margin="20,10">
+                                    <Label Text="Mô tả" FontSize="14"
+                                            FontAttributes="Bold"
+                                            TextColor="#363636"></Label>
+                                    <Label FontSize="12" TextColor="#363636"
+                                            Text="{Binding Project.Description}"></Label>
+                                </StackLayout>
+                                <StackLayout Margin="20,10">
+                                    <Label Text="Chủ đầu tư" FontSize="14"
+                                            FontAttributes="Bold"
+                                            TextColor="#363636"></Label>
+                                    <Label FontSize="12" TextColor="#363636"
+                                            Text="{Binding Project.Investor}"></Label>
+                                </StackLayout>
+                                <StackLayout Margin="20,10">
+                                    <Label Text="Diện tích đất" FontSize="14"
+                                            FontAttributes="Bold"
+                                            TextColor="#363636"></Label>
+                                    <Label FontSize="12" TextColor="#363636"
+                                            Text="{Binding Project.Acreage, StringFormat='{0:F0} m2'}"></Label>
+                                </StackLayout>
+                                <StackLayout Margin="20,10">
+                                    <Label Text="Diện tích sàn" FontSize="14"
+                                            FontAttributes="Bold"
+                                            TextColor="#363636"></Label>
+                                    <Label FontSize="12" TextColor="#363636"
+                                            Text="{Binding Project.AcreageFloor, StringFormat='{0:F0} m2'}"></Label>
+                                </StackLayout>
+                                <StackLayout Margin="20,10">
+                                    <Label Text="Quy mô căn hộ" FontSize="14"
+                                            FontAttributes="Bold"
+                                            TextColor="#363636"></Label>
+                                    <Label FontSize="12" TextColor="#363636"
+                                            Text="{Binding Project.ApartmentNumber, StringFormat='{0:F0} căn'}"></Label>
+                                </StackLayout>
+                                <StackLayout Margin="20,10">
+                                    <Label Text="Số tầng" FontSize="14"
+                                            FontAttributes="Bold"
+                                            TextColor="#363636"></Label>
+                                    <Label FontSize="12" TextColor="#363636"
+                                            Text="{Binding Project.Floor, StringFormat='{0:F0} tầng'}"></Label>
+                                </StackLayout>
+                                <StackLayout Margin="20,10">
+                                    <Label Text="Bàn giao dự kiến" FontSize="14"
+                                            FontAttributes="Bold"
+                                            TextColor="#363636"></Label>
+                                    <Label FontSize="12" TextColor="#363636"
+                                            Text="{Binding Project.HandedOver}"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout IsVisible="{Binding IsReal}">
+                                    <Frame Margin="10,10" HasShadow="False" Padding="0"
+                                            IsClippedToBounds="True"
+                                            BorderColor="#F5F5F5">
+                                        <Grid Padding="0" Margin="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="90"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="140"></RowDefinition>
+                                                <RowDefinition Height="34"></RowDefinition>
+                                                <RowDefinition Height="34"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <AbsoluteLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"
+                                                    HeightRequest="140">
+                                                <Image AbsoluteLayout.LayoutFlags="All"
+                                                        AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                        HeightRequest="140" Source="{Binding Thumbnail}"
+                                                        Aspect="AspectFill"></Image>
+                                                <Grid AbsoluteLayout.LayoutFlags="All"
+                                                        AbsoluteLayout.LayoutBounds="1,1,1,1">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="60"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="60"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <renderers:CustomImageButton Grid.Column="1"
+                                                                                    HeightRequest="40" WidthRequest="40"
+                                                                                    Clicked="onSaveReal" Margin="10"
+                                                                                    Tag="{Binding Id}"
+                                                                                    CornerRadius="20" Aspect="AspectFit" Padding="12"
+                                                                                    BorderColor="#F5F5F7" BorderWidth="1"
+                                                                                    Source="{Binding ImageSave}" BackgroundColor="White">
+                                                    </renderers:CustomImageButton>
+                                                </Grid>
+                                            </AbsoluteLayout>
+                                            <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                                                    Margin="5,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="20"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <ImageButton Grid.Column="0" Padding="0,10,5,10" Source="location"></ImageButton>
+                                                <Label Grid.Column="1" TextColor="#77858C"
+                                                        FontSize="11" VerticalTextAlignment="Center"
+                                                        Text="{Binding Address}"></Label>
+                                            </Grid>
+                                            <StackLayout Grid.Column="3" Grid.Row="1" Grid.RowSpan="2"
+                                                            HorizontalOptions="EndAndExpand" Margin="0,0,5,0"
+                                                            Orientation="Horizontal">
+                                                <Label Text="{Binding PriceString}" TextColor="#00A344" FontSize="16"
+                                                        VerticalTextAlignment="Center"></Label>
+                                                <Label Text="{Binding PriceUnit}" VerticalTextAlignment="Center"
+                                                        TextColor="#A9A9BA" FontSize="11"></Label>
+                                            </StackLayout>
+                                            <Label Grid.Column="0" Grid.Row="2" Grid.RowSpan="1"
+                                                    Margin="5,0" Text="{Binding Acreage, StringFormat='{0:F1} m2'}"
+                                                    TextColor="#363636" FontSize="11"></Label>
+                                            <Label Grid.Column="1" Grid.Row="2" Grid.RowSpan="1"
+                                                    HorizontalTextAlignment="Center"
+                                                    Text="{Binding RealType}" TextColor="#363636" FontSize="11"></Label>
+                                            <Label Grid.Column="2" Grid.Row="2" Grid.RowSpan="1"
+                                                    Text="{Binding Direction}" TextColor="#363636"
+                                                    HorizontalTextAlignment="Center"
+                                                    FontSize="11"></Label>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,64"
+                         AbsoluteLayout.LayoutFlags="WidthProportional">
+                <Grid Margin="20,24,20,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="40"></ColumnDefinition>
+                        <ColumnDefinition Width="40"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ImageButton Grid.Column="0"
+                                 Source="back" BackgroundColor="White"
+                                 Margin="0" CornerRadius="20"
+                                 Clicked="onBack"
+                                 WidthRequest="40"
+                                 HeightRequest="40"></ImageButton>
+                    <ImageButton Grid.Column="2" Margin="0"
+                                 Clicked="onShare" HeightRequest="40"
+                                 WidthRequest="40"
+                                 Source="share"></ImageButton>
+                    <ImageButton Grid.Column="3" Margin="0"
+                                 WidthRequest="40" HeightRequest="40"
+                                 CornerRadius="20"
+                                 Padding="0" BackgroundColor="White"
+                                 Clicked="onSaveProject"
+                                 Source="{Binding Project.ImageSave}"></ImageButton>
+                </Grid>
+            </StackLayout>
+            <StackLayout BackgroundColor="Black" Opacity="0.4"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         IsVisible="{Binding IsBusy}"
+                         VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="#FC9261" IsRunning="{Binding IsBusy}"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"></ActivityIndicator>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

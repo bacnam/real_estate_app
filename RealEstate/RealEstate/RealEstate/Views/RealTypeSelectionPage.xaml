@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.RealTypeSelectionPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10,0" Visual="Material">
+            <Grid HeightRequest="40" Margin="20,24,20,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="55"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0"
+                             WidthRequest="40" HeightRequest="40"
+                             Clicked="onBack"
+                             Source="back" HorizontalOptions="Start"
+                             VerticalOptions="Center"></ImageButton>
+                <Button Grid.Column="2" Visual="Default"
+                        FontAttributes="Bold"
+                        Text="Bỏ chọn" Padding="0" TextColor="#1A8DFF"
+                        BackgroundColor="White"
+                        VerticalOptions="Center" FontSize="14"
+                        Clicked="itemUnSelect" IsVisible="{Binding IsMultiple}"
+                        HorizontalOptions="End"></Button>
+            </Grid>
+            <CollectionView ItemsSource="{Binding RealTypes}"
+                            ItemSizingStrategy="MeasureFirstItem"
+                            VerticalOptions="StartAndExpand">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     VerticalItemSpacing="20"
+                                     HorizontalItemSpacing="10"
+                                     Span="2"></GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Grid.Column="0" Grid.Row="0" Padding="0"
+                                    Text="{Binding Title}" FontSize="11" Visual="Default"
+                                    BorderWidth="1" BorderColor="#F5F5F7"
+                                    Clicked="onSelect"
+                                    BackgroundColor="{Binding BackgroundColor}" TextColor="{Binding TextColor}"
+                                    CornerRadius="17" HeightRequest="34"></Button>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Lưu lại" FontSize="16" Visual="Default"
+                    VerticalOptions="End" Margin="0,0,0,20"
+                    Clicked="onDone" IsVisible="{Binding IsMultiple}"
+                    TextColor="White" BackgroundColor="#FC9261"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

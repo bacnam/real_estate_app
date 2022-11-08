@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.RegisterReceiveNewsSuccessPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White" Spacing="0">
+            <StackLayout HorizontalOptions="StartAndExpand">
+                <AbsoluteLayout BackgroundColor="White">
+                    <Image Source="flow" AbsoluteLayout.LayoutFlags="All"
+                           AbsoluteLayout.LayoutBounds="1,1,1,1"></Image>
+                    <StackLayout AbsoluteLayout.LayoutFlags="All"
+                                 AbsoluteLayout.LayoutBounds="1,1,1,1">
+                        <Image Source="logo" VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+                </AbsoluteLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Spacing="20" Margin="10,0">
+                <Label Text="Đăng ký nhận tin thành công" TextColor="#1D262C"
+                       HorizontalTextAlignment="Center" Margin="0"
+                       FontSize="20"></Label>
+                <Label Text="Hệ thống của chúng tôi sẽ gửi thông báo kèm email cho quý anh/chị khi có tin rao mới khớp với yêu cầu."
+                       TextColor="#71828A" HorizontalTextAlignment="Center"
+                       FontSize="12"></Label>
+            </StackLayout>
+            <StackLayout Margin="10,0" VerticalOptions="EndAndExpand"
+                         HorizontalOptions="Fill" Spacing="20">
+                <Button Margin="0,0,0,0" Text="Quản lý đăng ký nhận"
+                        Clicked="onManagerNews" BorderColor="#88969D"
+                        BorderWidth="1" CornerRadius="8"
+                        BackgroundColor="White" TextColor="#626B70" FontSize="Small"
+                        VerticalOptions="CenterAndExpand"></Button>
+                <Button Margin="0,0,0,20" Text="Về trang chủ"
+                        CornerRadius="8"
+                        BackgroundColor="#FC9261" TextColor="White"
+                        Clicked="onGoHome" Visual="Default"
+                        FontSize="Medium" HeightRequest="44"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

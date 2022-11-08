@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.UtilityPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HeightRequest="40" Margin="20,24,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0"
+                             WidthRequest="40"
+                             Clicked="onBack"
+                             Source="back"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"></ImageButton>
+            </Grid>
+            <Label Text="Danh mục tiện ích"
+                   TextColor="#626B70"
+                   Margin="10,20"
+                   FontSize="16"></Label>
+            <Grid Margin="10,10" ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Frame Grid.Column="0" HasShadow="True"
+                       Visual="Material"
+                       BackgroundColor="White" Padding="0">
+                    <StackLayout Spacing="10">
+                        <Image Source="calculator" Margin="0,40,0,0"></Image>
+                        <Label Text="Dự toán chi phí" TextColor="#88969D"
+                               Margin="0"
+                               HorizontalTextAlignment="Center" FontSize="13"></Label>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="DuToanButton_Clicked"></TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Column="1" HasShadow="True"
+                       Visual="Material"
+                       BackgroundColor="White" Padding="0">
+                    <StackLayout Spacing="10">
+                        <Image Source="bat_quai" Margin="0,40,0,0"></Image>
+                        <Label Text="Tử vi phong thủy" TextColor="#88969D"
+                               Margin="0"
+                               HorizontalTextAlignment="Center" FontSize="13"></Label>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TuViButton_Clicked"></TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

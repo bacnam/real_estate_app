@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             x:Class="RealEstate.Views.ProjectSearchResultPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Grid RowSpacing="0" Padding="0" Margin="0"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1"
+                  AbsoluteLayout.LayoutFlags="All"
+                  VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="84"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0"
+                             WidthRequest="40" HeightRequest="40"
+                             Source="back"
+                             Clicked="onBack" Margin="20,24,20,20"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"></ImageButton>
+                <StackLayout Grid.Row="1" Padding="0">
+                    <ListView ItemsSource="{Binding Projects}" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                              RefreshCommand="{Binding LoadMoreCommand}"
+                              IsPullToRefreshEnabled="True" x:Name="listViewProjects"
+                              VerticalOptions="FillAndExpand"
+                              RefreshControlColor="Transparent"
+                              Margin="0,10,0,0" ItemTapped="onSelected"
+                              RowHeight="230" SeparatorColor="Transparent">
+                        <ListView.Header>
+                            <StackLayout HeightRequest="102" BackgroundColor="White">
+                                <Grid Margin="20,0" ColumnSpacing="0" RowSpacing="5"
+                                        HeightRequest="34" IsVisible="{Binding IsSale}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="4"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                                            Text="Tìm kiếm dự án" TextColor="#626B70" FontSize="16"></Label>
+                                    <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1"
+                                                HeightRequest="2" BackgroundColor="#FC9261"></BoxView>
+                                </Grid>
+                                <Grid Margin="20,10,15,10" HeightRequest="44">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="44"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding ProjectCount, StringFormat='{0} kết quả'}"
+                                            TextColor="#363636" FontSize="14"
+                                            FontAttributes="Bold"
+                                            VerticalTextAlignment="Center"
+                                            BackgroundColor="White"
+                                            HorizontalOptions="StartAndExpand"></Label>
+                                    <Label Grid.Column="1" Text="Sắp xếp"
+                                            TextColor="#A9A9BA" FontSize="11"
+                                            VerticalTextAlignment="Center"
+                                            BackgroundColor="White"
+                                            HorizontalOptions="EndAndExpand"></Label>
+                                    <ImageButton Grid.Column="2" Padding="0" Clicked="onSort"
+                                                    Source="sort" HorizontalOptions="EndAndExpand"></ImageButton>
+                                </Grid>
+                            </StackLayout>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame Margin="10,10" HasShadow="False" Padding="0"
+                                           IsClippedToBounds="True"
+                                           BorderColor="#F5F5F5">
+                                        <Grid Padding="0,0,0,10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="140"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <AbsoluteLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                                                            VerticalOptions="FillAndExpand">
+                                                <Image AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                       AbsoluteLayout.LayoutFlags="All"
+                                                       Source="{Binding Thumbnail}" HeightRequest="140"
+                                                       Aspect="AspectFill" VerticalOptions="StartAndExpand"></Image>
+                                                <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                      AbsoluteLayout.LayoutFlags="All">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="50"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <renderers:CustomImageButton Grid.Column="1" HorizontalOptions="End"
+                                                                                     HeightRequest="40" WidthRequest="40"
+                                                                                     Clicked="onSave" Margin="0,10,10,0"
+                                                                                     Tag="{Binding Id}"
+                                                                                     CornerRadius="20" Aspect="AspectFit" Padding="12"
+                                                                                     BorderColor="#F5F5F7" BorderWidth="1"
+                                                                                     Source="{Binding ImageSave}" BackgroundColor="White">
+                                                    </renderers:CustomImageButton>
+                                                </Grid>
+                                            </AbsoluteLayout>
+                                            <Image Grid.Row="1" Grid.Column="0" Grid.RowSpan="2"
+                                                   Margin="10" Source="location"></Image>
+                                            <Label Grid.Row="1" Grid.Column="1"
+                                                   TextColor="#363636" FontAttributes="Bold"
+                                                   FontSize="13" VerticalTextAlignment="End"
+                                                   Text="{Binding Name}"></Label>
+                                            <Label Grid.Row="2" Grid.Column="1"
+                                                   TextColor="#77858C" FontAttributes="None"
+                                                   FontSize="11" VerticalTextAlignment="Start"
+                                                   Text="{Binding Address}"></Label>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Grid>
+            <StackLayout BackgroundColor="Black" Opacity="0.4"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         IsVisible="{Binding IsBusy}"
+                         VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="#FC9261" IsRunning="{Binding IsBusy}"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"></ActivityIndicator>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

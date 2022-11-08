@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             x:Class="RealEstate.Views.NewsPage">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         VerticalOptions="FillAndExpand"
+                         BackgroundColor="White"
+                         AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Start" HeightRequest="120">
+                    <Grid HeightRequest="40" Margin="20,24,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <ImageButton Grid.Column="0" Padding="0" WidthRequest="40"
+                                     Clicked="onBack"
+                                     Source="back" HorizontalOptions="Start"
+                                     VerticalOptions="Center"></ImageButton>
+                        <ImageButton Grid.Column="2" Padding="0" WidthRequest="40"
+                                     Margin="0" Clicked="onSort"
+                                     VerticalOptions="Center" HorizontalOptions="End"
+                                     Source="sort"></ImageButton>
+                    </Grid>
+                    <StackLayout HeightRequest="40"
+                                 Margin="0,10,0,10"
+                                 Orientation="Horizontal" Padding="0">
+                        <StackLayout Spacing="0" Padding="10,0" BackgroundColor="White">
+                            <Label BackgroundColor="White" TextColor="#626B70"
+                                    x:Name="lblNews"
+                                    Text="Tin tức tổng hợp"></Label>
+                            <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
+                                        x:Name="lineNews"
+                                        HorizontalOptions="Start"></BoxView>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onNews"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                        <StackLayout Padding="0" Spacing="0" Margin="10,0,0,0">
+                            <Label BackgroundColor="White" TextColor="#88969D"
+                                    x:Name="lblMarket"
+                                    Text="Nhận định thị trường"></Label>
+                            <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
+                                        IsVisible="False" x:Name="lineMarket"
+                                        HorizontalOptions="Start"></BoxView>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onMarket"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <ListView Header="{Binding LatestNews}"
+                              VerticalOptions="FillAndExpand"
+                              ItemSelected="onSelected"
+                              RowHeight="100" SeparatorColor="Transparent"
+                              ItemsSource="{Binding ListNews}">
+                        <ListView.HeaderTemplate>
+                            <DataTemplate>
+                                <StackLayout BackgroundColor="White" Margin="0" Padding="0">
+                                    <Image Source="{Binding Thumbnail}" HorizontalOptions="Center"></Image>
+                                    <Label Text="{Binding Title}" Margin="10,5" FontSize="16"
+                                           TextColor="#626B70" FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding CreatedString}" Margin="10,5" FontSize="10" TextColor="#77858C"></Label>
+                                    <renderers:CustomWebView Source="{Binding DescriptionHtml}" Margin="0"
+                                             HeightRequest="80" IsEnabled="False"></renderers:CustomWebView>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="onHeaderSelected"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </DataTemplate>
+                        </ListView.HeaderTemplate>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Margin="10,10" ColumnSpacing="0" RowSpacing="0" Padding="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" Padding="0,5,10,0">
+                                            <Label FontSize="12" Text="{Binding Title}" TextColor="#626B70"
+                                                   FontAttributes="Bold"></Label>
+                                            <Label Text="{Binding CreatedString}" FontSize="10" TextColor="#77858C"></Label>
+                                        </StackLayout>
+                                        <Image Grid.Column="1" Source="{Binding Thumbnail}"></Image>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout BackgroundColor="Black" Opacity="0.4"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         IsVisible="{Binding IsBusy}"
+                         VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="#FC9261" IsRunning="{Binding IsBusy}"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"></ActivityIndicator>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SeGkl4yCu2jwqIKGyEglhvzTaWSYIerXpL8u9e3YERiSgJwTis4HmgcbtK/Na4of+6QWmhVcrtFH68Ikkw3uyQ==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\real_estate_app\\RealEstate.WebService\\RealEstate.Core\\RealEstate.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

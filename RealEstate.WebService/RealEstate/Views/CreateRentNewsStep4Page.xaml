@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             x:Class="RealEstate.Views.CreateRentNewsStep4Page">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <renderers:KeyboardView AbsoluteLayout.LayoutFlags="All"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         VerticalOptions="Start">
+                <ScrollView>
+                    <ScrollView.Content>
+                        <StackLayout Margin="0,0" Spacing="0">
+                            <StackLayout HeightRequest="380" Spacing="0" Padding="0">
+                                <CarouselView ItemsSource="{Binding RentNews.Images}">
+                                    <CarouselView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Image Aspect="AspectFill" HeightRequest="380"
+                                                   VerticalOptions="StartAndExpand"
+                                                   Source="{Binding ImageSource}"></Image>
+                                        </DataTemplate>
+                                    </CarouselView.ItemTemplate>
+                                </CarouselView>
+                            </StackLayout>
+                            <StackLayout Margin="20,0" Spacing="10">
+                                <Grid Margin="0,20,0,0" ColumnSpacing="0" RowSpacing="0" BackgroundColor="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="44"></RowDefinition>
+                                        <RowDefinition Height="25"></RowDefinition>
+                                        <RowDefinition Height="25"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="64"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding RentNews.PriceString}" TextColor="#00A344" FontSize="22" FontAttributes="Bold"></Label>
+                                    <Label Grid.Column="0" Grid.Row="1"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding RentNews.Acreage, StringFormat='{0:F0} m2'}" TextColor="#363636" FontSize="14"></Label>
+                                    <Label Grid.Column="1" Grid.Row="1"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding RentNews.Room}" TextColor="#363636" FontSize="14"></Label>
+                                    <Label Grid.Column="2" Grid.Row="1"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding RentNews.Floor}" TextColor="#363636" FontSize="14"></Label>
+                                    <ImageButton Grid.Column="3" Grid.Row="0" Grid.RowSpan="2"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    Source="map"></ImageButton>
+                                    <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4"
+                                            TextColor="#77858C" FontSize="13"
+                                            Text="{Binding RentNews.FullAddress}"></Label>
+                                </Grid>
+                                <StackLayout Margin="0,5">
+                                    <Label Text="Mô tả" TextColor="#363636" FontSize="14"
+                                            FontAttributes="Bold"></Label>
+                                    <Label TextColor="#363636" FontSize="12"
+                                            Text="{Binding RentNews.Desciption}"></Label>
+                                </StackLayout>
+                                <StackLayout Margin="0,5">
+                                    <Label Text="Hướng nhà" TextColor="#363636" FontSize="14"
+                                            FontAttributes="Bold"></Label>
+                                    <Label TextColor="#363636" FontSize="12"
+                                            Text="{Binding RentNews.Direction.Name}"></Label>
+                                </StackLayout>
+                                <StackLayout Margin="0,5">
+                                    <Label Text="Dự án" TextColor="#363636" FontSize="14"
+                                            FontAttributes="Bold"></Label>
+                                    <Label TextColor="#363636" FontSize="12"
+                                            Text="{Binding RentNews.Project.Name}"></Label>
+                                </StackLayout>
+                                <Grid ColumnSpacing="0" RowSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Ngày đăng" TextColor="#363636"
+                                                FontSize="14" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding RentNews.StartDate, StringFormat='{0:dd-MM-yyyy}'}" FontSize="12"
+                                                TextColor="#363636"></Label>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="Ngày hết hạn" TextColor="#363636"
+                                                HorizontalTextAlignment="End"
+                                                FontSize="14" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding RentNews.StartDate, StringFormat='{0:dd-MM-yyyy}'}" FontSize="12"
+                                                HorizontalTextAlignment="End"
+                                                TextColor="#363636"></Label>
+                                    </StackLayout>
+                                </Grid>
+                                <StackLayout Margin="0,5">
+                                    <Label Text="Liên hệ" TextColor="#363636" FontSize="14"
+                                            FontAttributes="Bold"></Label>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="68"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="34"></RowDefinition>
+                                            <RowDefinition Height="34"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" Grid.Row="0"
+                                               TextColor="#363636" FontSize="12"
+                                               VerticalTextAlignment="End"
+                                               Text="{Binding RentNews.ContactName}"></Label>
+                                        <Label Grid.Column="0" Grid.Row="1"
+                                               VerticalTextAlignment="Start"
+                                               TextColor="#1A8DFF" FontSize="12"
+                                               Text="{Binding RentNews.ContactPhone}"></Label>
+                                        <ImageButton Grid.Column="1" Grid.Row="0"
+                                                     Grid.RowSpan="2"
+                                                     CornerRadius="34" HeightRequest="68"
+                                                     WidthRequest="68" Source="avatar.jpg" Aspect="AspectFill"></ImageButton>
+                                    </Grid>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView.Content>
+                </ScrollView>
+                <Button Text="Hoàn tất" TextColor="White" Clicked="onDone"
+                        BackgroundColor="#FC9261" Margin="10"></Button>
+            </renderers:KeyboardView>
+            <Grid ColumnSpacing="0" RowSpacing="0"
+                  Margin="0,20,0,0"
+                  AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                  VerticalOptions="Start"
+                  HeightRequest="64">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.Column="0" Padding="10"
+                             Clicked="onBack"
+                             WidthRequest="64" Source="back"
+                             HorizontalOptions="StartAndExpand" VerticalOptions="Center"></ImageButton>
+            </Grid>
+            <StackLayout BackgroundColor="Black" Opacity="0.4"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         IsVisible="{Binding IsBusy}"
+                         VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="#FC9261" IsRunning="{Binding IsBusy}"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"></ActivityIndicator>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

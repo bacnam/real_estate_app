@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.ProfilePage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Visual="Material"
+                         AbsoluteLayout.LayoutFlags="All"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <ImageButton Padding="0" WidthRequest="40"
+                             HeightRequest="40"
+                             Clicked="onBack"
+                             Margin="20,24,20,10"
+                             Source="back"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"></ImageButton>
+                <ScrollView>
+                    <ScrollView.Content>
+                        <StackLayout Margin="10,0">
+                            <StackLayout Margin="0,10">
+                                <Label Text="Thông tin liên hệ"
+                                    FontSize="16" TextColor="#626B70"></Label>
+                                <Frame BackgroundColor="#F5F5F7" HasShadow="False"
+                                        Margin="0,10">
+                                    <Grid ColumnSpacing="0" RowSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="68"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="34"></RowDefinition>
+                                            <RowDefinition Height="24"></RowDefinition>
+                                            <RowDefinition Height="24"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" Grid.Row="0"
+                                                Text="{Binding FullName}" HeightRequest="34"
+                                                TextColor="#58504F" FontSize="16"
+                                                FontAttributes="Bold"
+                                                VerticalTextAlignment="Start"></Label>
+                                        <Label Grid.Column="0" Grid.Row="1"
+                                                Text="{Binding PhoneNumber}"
+                                                TextColor="#1A8DFF" FontSize="13"
+                                                VerticalTextAlignment="End"></Label>
+                                        <Label Grid.Column="0" Grid.Row="2"
+                                                VerticalTextAlignment="Start"
+                                                TextColor="#626B70" FontSize="13"
+                                                Text="{Binding Email}"></Label>
+                                        <ImageButton Grid.Column="1" Grid.RowSpan="3"
+                                                        HeightRequest="68"
+                                                        WidthRequest="68"
+                                                        Margin="0,7"
+                                                        CornerRadius="34"
+                                                        Aspect="AspectFill"
+                                                        Source="{Binding Avatar}"></ImageButton>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout Margin="0,10">
+                                <Label Text="Cài đặt ứng dụng"
+                                        TextColor="#626B70" FontSize="16"></Label>
+                                <Frame HasShadow="False"
+                                        BorderColor="#E7ECEE">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal" HeightRequest="34">
+                                            <Label Text="Quản lý đăng tin"
+                                                    HeightRequest="34"
+                                                    TextColor="#71828A" FontSize="13"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalOptions="StartAndExpand"></Label>
+                                            <Image Source="arrow-back" HeightRequest="34"></Image>
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="onManagerNews"></TapGestureRecognizer>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HeightRequest="34">
+                                            <Label Text="Danh mục đã lưu"
+                                                    HeightRequest="34"
+                                                    TextColor="#71828A" FontSize="13"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalOptions="StartAndExpand"></Label>
+                                            <Image Source="arrow-back" HeightRequest="34"></Image>
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="onManagerSaved"></TapGestureRecognizer>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HeightRequest="34">
+                                            <Label Text="Thông báo"
+                                                    HeightRequest="34"
+                                                    TextColor="#71828A" FontSize="13"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalOptions="Start"></Label>
+                                            <Frame HasShadow="False" Padding="0" WidthRequest="40"
+                                                    Margin="0,7" CornerRadius="10"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    BackgroundColor="#0B9AF5">
+                                                <StackLayout HorizontalOptions="CenterAndExpand"
+                                                                VerticalOptions="CenterAndExpand">
+                                                    <Label Text="{Binding Notification}" VerticalTextAlignment="Center"
+                                                            HorizontalTextAlignment="Center"
+                                                            FontSize="12"
+                                                            TextColor="White"></Label>
+                                                </StackLayout>
+                                            </Frame>
+                                            <Image Source="arrow-back" HeightRequest="34"></Image>
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="onNotification"></TapGestureRecognizer>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout Margin="0,10">
+                                <Label Text="Cài đặt khác"
+                                        TextColor="#626B70" FontSize="16"></Label>
+                                <Frame HasShadow="False"
+                                        BorderColor="#E7ECEE">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal" HeightRequest="34">
+                                            <Label Text="Thông báo từ ứng dụng"
+                                                    HeightRequest="34"
+                                                    TextColor="#71828A" FontSize="13"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalOptions="StartAndExpand"></Label>
+                                            <Switch OnColor="#0B9AF5"
+                                                    IsToggled="True"></Switch>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HeightRequest="34">
+                                            <Label Text="Sử dụng vị trí"
+                                                    HeightRequest="34"
+                                                    TextColor="#71828A" FontSize="13"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalOptions="StartAndExpand"></Label>
+                                            <Switch OnColor="#0B9AF5"></Switch>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView.Content>
+                </ScrollView>
+                <Button BorderColor="#F5F5F7" BackgroundColor="White"
+                        BorderWidth="1" Margin="10,10" Visual="Default"
+                        TextColor="#E25050" FontSize="16" Command="{Binding LogoutCommand}"
+                        Text="Đăng xuất tài khoản"></Button>
+            </StackLayout>
+            <StackLayout BackgroundColor="Black" Opacity="0.4"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         IsVisible="{Binding IsBusy}"
+                         VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="#FC9261" IsRunning="{Binding IsBusy}"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"></ActivityIndicator>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

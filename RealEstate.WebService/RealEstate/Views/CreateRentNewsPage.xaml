@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="RealEstate.Views.CreateRentNewsPage">
+    <ContentPage.Content>
+        <renderers:KeyboardView BackgroundColor="White">
+            <Grid HeightRequest="64" Margin="20,24,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0" WidthRequest="40"
+                             Clicked="onBack" Margin="0"
+                             Source="back" HorizontalOptions="Start" VerticalOptions="Center"></ImageButton>
+                <Label Grid.Column="1" Text="{Binding RentNews.HeaderTitle}"
+                       FontSize="16" TextColor="#363636"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center">
+                </Label>
+                <Frame Grid.Column="2" CornerRadius="20" Margin="0"
+                       Padding="0" HorizontalOptions="End"
+                       HeightRequest="40" WidthRequest="40"
+                       BackgroundColor="#F5F5F7" BorderColor="#F5F5F5"
+                       HasShadow="False">
+                    <Label VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span TextColor="#363636"
+                                        Text="1"
+                                        FontSize="14"></Span>
+                                <Span TextColor="#A9A9BA"
+                                        FontSize="14"
+                                        Text="/3"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+            </Grid>
+            <StackLayout Margin="10,0">
+                <ScrollView>
+                    <ScrollView.Content>
+                        <StackLayout Spacing="0">
+                            <Label Text="Thông tin cơ bản"
+                                   Margin="10,0,10,20"
+                                   TextColor="#626B70" FontSize="16"></Label>
+                            <StackLayout HeightRequest="44" Margin="0,0,0,10">
+                                <renderers:NoBorderEntry HeightRequest="44" Text="{Binding RentNews.Address}"
+                                                         BackgroundColor="#F6F6F6"
+                                                         ReturnType="Search"
+                                                         ReturnCommand="{Binding SearchAddressCommand}"
+                                                         IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
+                                                         Placeholder="Nhập vào số nhà, ngõ, đường"></renderers:NoBorderEntry>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="34"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Loại bất động sản" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="{Binding RentNews.RealType.Title}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                    </StackLayout>
+                                    <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="RealTypeTapped"></TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Grid HeightRequest="34">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="34"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Tỉnh/Thành phố" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="{Binding RentNews.City.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                    </StackLayout>
+                                    <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TinhTapped"></TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Grid HeightRequest="34">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="34"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Quận/huyện" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="{Binding RentNews.District.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                    </StackLayout>
+                                    <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="DistrictTapped"></TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Grid HeightRequest="34">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="34"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Xã/phường" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="{Binding RentNews.Ward.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                    </StackLayout>
+                                    <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="WardTapped"></TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Grid HeightRequest="34">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="34"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Dự án" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="{Binding RentNews.Project.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                    </StackLayout>
+                                    <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ProjectTapped"></TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout Margin="10">
+                                <Label Text="Vị trí trên bản đồ" TextColor="#A9A9BA" FontSize="10"></Label>
+                                <StackLayout Orientation="Horizontal" HeightRequest="34"
+                                             Padding="0" Margin="0,10,0,0" Spacing="0">
+                                    <Label Text="{Binding RentNews.Latitude, StringFormat='{0:F7}/'}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                    <Label Text="{Binding RentNews.Longitude, StringFormat='{0:F7}'}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout HeightRequest="300">
+                                <maps:Map MapType="Street" x:Name="maps"
+                                          HasZoomEnabled="False"
+                                          VerticalOptions="FillAndExpand"
+                                          HorizontalOptions="FillAndExpand">
+                                </maps:Map>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView.Content>
+                </ScrollView>
+                <Button Clicked="onContinute"
+                        Margin="0,10,0,10" Text="Tiếp tục"
+                        TextColor="White" BackgroundColor="#FC9261"></Button>
+            </StackLayout>
+        </renderers:KeyboardView>
+    </ContentPage.Content>
+</ContentPage>

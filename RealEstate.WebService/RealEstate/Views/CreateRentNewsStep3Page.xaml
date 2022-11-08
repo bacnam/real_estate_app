@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="RealEstate.Views.CreateRentNewsStep3Page">
+    <ContentPage.Content>
+        <renderers:KeyboardView Visual="Material">
+            <Grid HeightRequest="64" Margin="20,24,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0" WidthRequest="40"
+                             Clicked="onBack" Margin="0"
+                             Source="back" HorizontalOptions="Start" VerticalOptions="Center"></ImageButton>
+                <Label Grid.Column="1" Text="{Binding RentNews.HeaderTitle}"
+                       FontSize="16" TextColor="#363636"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center">
+                </Label>
+                <Frame Grid.Column="2" CornerRadius="20" Margin="0"
+                       Padding="0" HorizontalOptions="End"
+                       HeightRequest="40" WidthRequest="40"
+                       BackgroundColor="#F5F5F7" BorderColor="#F5F5F5"
+                       HasShadow="False">
+                    <Label VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span TextColor="#363636"
+                                        Text="3"
+                                        FontSize="14"></Span>
+                                <Span TextColor="#A9A9BA"
+                                        FontSize="14"
+                                        Text="/3"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+            </Grid>
+            <ScrollView >
+                <ScrollView.Content>
+                    <StackLayout Padding="10,0" Spacing="10">
+                        <Label  Text="Thông tin liên hệ"
+                                Margin="0,0,0,10"
+                                TextColor="#626B70" FontSize="16"></Label>
+                        <Entry  TextColor="#363636" FontSize="14"
+                                BackgroundColor="#F6F6F6" Keyboard="Text"
+                                PlaceholderColor="#A9A9BA"
+                                Text="{Binding RentNews.ContactName}"
+                                Placeholder="Tên liên hệ"></Entry>
+                        <Entry  TextColor="#363636" FontSize="14"
+                                PlaceholderColor="#A9A9BA"
+                                BackgroundColor="#F6F6F6" Keyboard="Telephone"
+                                Text="{Binding RentNews.ContactPhone}"
+                                Placeholder="Di động"></Entry>
+                        <Grid ColumnSpacing="10" RowSpacing="0" Padding="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" BackgroundColor="#F6F6F6"
+                                            Spacing="0" Padding="0" HeightRequest="65">
+                                <Label Text="Ngày bắt đầu" TextColor="#A9A9BA"
+                                        FontSize="10"
+                                        Margin="15,10,0,0"></Label>
+                                <AbsoluteLayout Padding="0">
+                                    <ImageButton AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                 AbsoluteLayout.LayoutFlags="All"
+                                                 VerticalOptions="End" HeightRequest="50"
+                                                 HorizontalOptions="End" Margin="0,5,10,0"
+                                                 Source="calendar"></ImageButton>
+                                    <DatePicker BackgroundColor="Transparent" Margin="0"
+                                                FontSize="14" AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                AbsoluteLayout.LayoutFlags="All"
+                                                MinimumDate="{x:Static sys:DateTime.Now}"
+                                                Format="dd-MM-yyyy" Date="{Binding RentNews.StartDate}"
+                                                TextColor="#363636"></DatePicker>
+                                </AbsoluteLayout>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" BackgroundColor="#F6F6F6"
+                                            Spacing="0" HeightRequest="65">
+                                <Label Text="Ngày kết thúc" TextColor="#A9A9BA"
+                                        FontSize="10"
+                                        Margin="15,10,0,0"></Label>
+                                <AbsoluteLayout Padding="0">
+                                    <ImageButton AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                 AbsoluteLayout.LayoutFlags="All"
+                                                 VerticalOptions="End" HeightRequest="50"
+                                                 HorizontalOptions="End" Margin="0,5,10,0"
+                                                 Source="calendar"></ImageButton>
+                                    <DatePicker BackgroundColor="Transparent" Margin="0"
+                                                Format="dd-MM-yyyy" Date="{Binding RentNews.EndDate}"
+                                                MinimumDate="{x:Static sys:DateTime.Now}"
+                                                FontSize="14" AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                AbsoluteLayout.LayoutFlags="All"
+                                                TextColor="#363636"></DatePicker>
+                                </AbsoluteLayout>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView.Content>
+            </ScrollView>
+            <Button Text="Xem trước tin đăng" TextColor="White"
+                    Margin="10,20,10,10" VerticalOptions="EndAndExpand"
+                    Clicked="onContinute" Visual="Default"
+                    BackgroundColor="#FC9261"
+                    HeightRequest="44"></Button>
+        </renderers:KeyboardView>
+    </ContentPage.Content>
+</ContentPage>

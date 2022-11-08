@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.SelectPricePage">
+    <ContentPage.Content>
+        <StackLayout Margin="0,0" Visual="Material" HorizontalOptions="StartAndExpand">
+            <Grid HeightRequest="40" Margin="20,24,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0"
+                             WidthRequest="40"
+                             Clicked="onBack"
+                             Source="back"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"></ImageButton>
+            </Grid>
+            <ListView SeparatorColor="Transparent" ItemsSource="{Binding Prices}"
+                      HorizontalOptions="StartAndExpand"
+                      Margin="20,0"
+                      ItemTapped="priceItemTapped">
+                <ListView.Header>
+                    <Grid HeightRequest="24" Margin="0" Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Mức giá"
+                                VerticalTextAlignment="Start"
+                                TextColor="#626B70" FontSize="16"></Label>
+                        <Label Grid.Column="1" Text="Đơn vị: VND"
+                                HorizontalTextAlignment="End"
+                                VerticalTextAlignment="End"
+                                TextColor="#A9A9BA" FontSize="11"></Label>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid HeightRequest="34" ColumnSpacing="0" RowSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="34"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Label Text="{Binding PriceString}" HeightRequest="34"
+                                            VerticalTextAlignment="Center"
+                                            TextColor="#1D1D1D" FontSize="14"></Label>
+                                </StackLayout>
+                                <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Margin="20,10,20,0">
+                <Grid HeightRequest="34" ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="34"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0">
+                        <Label Text="Khác" HeightRequest="34"
+                                VerticalTextAlignment="Center"
+                                TextColor="#1D1D1D" FontSize="14"></Label>
+                    </StackLayout>
+                    <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OtherCommand}"></TapGestureRecognizer>
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </StackLayout>
+            <Grid Margin="20,10,20,30" IsVisible="{Binding IsOther}" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Entry Grid.Column="0" Placeholder="Từ"
+                        PlaceholderColor="#A9A9BA"
+                        TextColor="#1D1D1D" Keyboard="Numeric"
+                        FontSize="14" x:Name="fromPrice"
+                        Visual="Material"></Entry>
+                <Entry Grid.Column="1" Placeholder="Đến"
+                        PlaceholderColor="#A9A9BA"
+                        TextColor="#1D1D1D" Keyboard="Numeric"
+                        FontSize="14" x:Name="toPrice"
+                        Visual="Material"></Entry>
+            </Grid>
+            <Button Text="Lưu lại" FontSize="16" Visual="Default"
+                    VerticalOptions="EndAndExpand" Margin="10,10,10,10"
+                    Clicked="onDone"
+                    TextColor="White" BackgroundColor="#FC9261"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

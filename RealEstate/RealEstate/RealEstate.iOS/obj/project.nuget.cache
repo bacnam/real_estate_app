@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Sp45lZKKLWYA8ywnC8dLls42Oc6XHdqlFDpcJW9saBf/wEhBwnQwq/sZ4KDL8DUrysMMndyhGlJcmZEJV14uUA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\real_estate_app\\RealEstate\\RealEstate\\RealEstate.iOS\\RealEstate.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6W+fUJMIKnS5P4jo4uyLN+XuGKpa51H2UxBxM5mVLX7lD2qsQXKkGTl7kXnoNk52tDVxZPSGVgY/mnlEZaPxEA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\real_estate_app\\RealEstate\\SegmentedControl\\SegmentedControl.FormsPlugin.Abstractions\\SegmentedControl.FormsPlugin.Abstractions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImageSource="background"
+             x:Class="RealEstate.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout Margin="0"
+                     BackgroundColor="Transparent"
+                     VerticalOptions="StartAndExpand" Padding="0">
+            <Grid HeightRequest="44"
+                  ColumnSpacing="0"
+                  RowSpacing="0"
+                  Padding="0,20,0,20"
+                  Margin="20,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="44"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="44"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label VerticalOptions="CenterAndExpand"
+                       TextColor="#626B70"
+                       Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontSize="18" Text="Mừng "></Span>
+                            <Span FontSize="19" FontAttributes="Bold" Text="{Binding FullName}"></Span>
+                            <Span FontSize="18" Text=" trở lại"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <StackLayout Grid.Column="1" Margin="0,0"
+                             Spacing="0"
+                             Padding="0">
+                    <Frame Padding="0" Margin="10,0" HasShadow="False"
+                           HeightRequest="16" WidthRequest="26"
+                           CornerRadius="6" BackgroundColor="#0B9AF5">
+                        <Label Text="{Binding Notification}" BackgroundColor="Transparent"
+                           TextColor="White" VerticalTextAlignment="Center"
+                           FontSize="9" HorizontalTextAlignment="Center"></Label>
+                    </Frame>
+                    <StackLayout Margin="0,0,0,0" HeightRequest="20"
+                                 Spacing="0"
+                                 HorizontalOptions="Start">
+                        <Image Margin="0,0,0,20" Source="alarm"></Image>
+                    </StackLayout>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="notificationTapped"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+            <StackLayout HeightRequest="280" Spacing="0"
+                         VerticalOptions="Start"
+                         Padding="0">
+                <CarouselView ItemsSource="{Binding Banners}"
+                              Margin="10,0"
+                              IndicatorView="indicatorView"
+                              VerticalScrollBarVisibility="Never"
+                              HorizontalScrollBarVisibility="Never"
+                              CurrentItemChanged="onCurrentItemChanged"
+                              HeightRequest="220"
+                              x:Name="carouselView">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Spacing="0">
+                                <Image Aspect="Fill" HeightRequest="220"
+                                    VerticalOptions="StartAndExpand"
+                                    Source="{Binding .}"></Image>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="bannerTapped"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView IndicatorsShape="Square"
+                               x:Name="indicatorView"
+                               IndicatorColor="LightGray"
+                               SelectedIndicatorColor="DarkGray"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start"
+                               Margin="0,10,0,10" />
+            </StackLayout>
+            <Label TextColor="#626B70"
+                   Margin="20,0"
+                   FontSize="16"
+                   Text="Danh mục"></Label>
+            <StackLayout BackgroundColor="Transparent"
+                         Spacing="10" Margin="20,0"
+                         VerticalOptions="End">
+                <Frame Margin="0,5" HasShadow="False"
+                       Padding="10,15"
+                       BackgroundColor="#FFFFFF">
+                    <StackLayout Orientation="Horizontal" Spacing="20"
+                                 HeightRequest="34">
+                        <Image Source="home_sale" Margin="4"></Image>
+                        <Label Text="Nhà đất bán"
+                               VerticalTextAlignment="Center"
+                               TextColor="#88969D"></Label>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SaleButton_Clicked"></TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="0,5" HasShadow="False"
+                       Padding="10,15"
+                       BackgroundColor="#FFFFFF">
+                    <StackLayout Orientation="Horizontal" Spacing="20"
+                                 HeightRequest="34">
+                        <Image Source="home" Margin="4"></Image>
+                        <Label Text="Nhà đất cho thuê"
+                               VerticalTextAlignment="Center"
+                               TextColor="#88969D"></Label>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LeaseButton_Clicked"></TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Frame>
+                <Grid Margin="0,5" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="0" HasShadow="False" BackgroundColor="White" Padding="0">
+                        <StackLayout>
+                            <Image Source="project" HeightRequest="25" Margin="0,10,0,5"></Image>
+                            <Label Text="Tin tức" TextColor="#88969D" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NewsButton_Clicked"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="1" HasShadow="False" BackgroundColor="White" Padding="0">
+                        <StackLayout>
+                            <Image Source="project" HeightRequest="25" Margin="0,10,0,5"></Image>
+                            <Label Text="Dự án" TextColor="#88969D" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ProjectButton_Clicked"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="2" HasShadow="False" BackgroundColor="White" Padding="0">
+                        <StackLayout>
+                            <Image Source="blog" HeightRequest="25" Margin="0,10,0,5"></Image>
+                            <Label Text="Đăng tin" TextColor="#88969D" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="CreateNewsButton_Clicked"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Margin="0,0,0,20" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="0" HasShadow="False" BackgroundColor="White" Padding="0">
+                        <StackLayout>
+                            <Image Source="saved" HeightRequest="25" Margin="0,10,0,5"></Image>
+                            <Label Text="Tin đã lưu" TextColor="#88969D" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="SavedButton_Clicked"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="1" HasShadow="False" BackgroundColor="White" Padding="0">
+                        <StackLayout>
+                            <Image Source="utilities" HeightRequest="25" Margin="0,10,0,5"></Image>
+                            <Label Text="Tiện ích" TextColor="#88969D" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="UtilitiesButton_Clicked"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="2" HasShadow="False" BackgroundColor="White" Padding="0">
+                        <StackLayout>
+                            <Image Source="shield" HeightRequest="25" Margin="0,10,0,5"></Image>
+                            <Label Text="Tài khoản" TextColor="#88969D" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onAccountButton_Clicked"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

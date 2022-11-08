@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             x:Class="RealEstate.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Grid HeightRequest="40" Margin="20,24,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0"
+                             Clicked="onBack" Margin="0"
+                             WidthRequest="40" Source="back"
+                             HorizontalOptions="Start" VerticalOptions="Center"></ImageButton>
+            </Grid>
+            <StackLayout HeightRequest="568" VerticalOptions="CenterAndExpand">
+                <AbsoluteLayout BackgroundColor="White">
+                    <Image Source="flow" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1"></Image>
+                    <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                        <Image Source="logo" Margin="0,30,0,0" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+                    <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                        <StackLayout VerticalOptions="EndAndExpand">
+                            <Label Text="Đăng nhập" TextColor="#1D262C" Margin="0,0,0,20" FontSize="Header" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                            <Label Text="Đăng nhập để sử dụng dịch vụ" Margin="0,0,0,30" TextColor="#71828A" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </AbsoluteLayout>
+                <renderers:KeyboardView Margin="20,0" VerticalOptions="EndAndExpand">
+                    <Entry Visual="Material" Margin="0,5" Placeholder="Địa chỉ Email"
+                           Text="{Binding Email}" Keyboard="Email"
+                           PlaceholderColor="#71828A" BackgroundColor="White"></Entry>
+                    <Entry Visual="Material" Margin="0,5" Placeholder="Mật khẩu"
+                           Text="{Binding Password}" IsPassword="True"
+                           PlaceholderColor="#71828A" BackgroundColor="White"></Entry>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid ColumnSpacing="0" HorizontalOptions="Start">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox IsChecked="True" Color="#6487FE" Grid.Column="0"></CheckBox>
+                                <Label Text="Nhớ mật khẩu" TextColor="#1D262C" LineHeight="2" FontSize="Small" Grid.Column="1"></Label>
+                            </Grid>
+                        </Grid>
+                        <Button Grid.Column="1" Text="Quên mật khẩu" TextColor="#1D262C" HorizontalOptions="End"></Button>
+                    </Grid>
+                    <Button Text="Đăng nhập" TextColor="White"
+                            Command="{Binding LoginCommand, Mode=TwoWay}" HeightRequest="44"
+                            BackgroundColor="#FC9261" Margin="0,20,0,0"></Button>
+                    <Button Text="Đăng ký tài khoản mới" BackgroundColor="White"
+                            Clicked="onRegister"
+                            TextColor="#1D262C"></Button>
+                </renderers:KeyboardView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

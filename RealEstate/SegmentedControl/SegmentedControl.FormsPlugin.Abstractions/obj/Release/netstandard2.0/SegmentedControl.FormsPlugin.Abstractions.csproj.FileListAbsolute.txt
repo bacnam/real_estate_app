@@ -1,0 +1,9 @@
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/bin/Release/netstandard2.0/SegmentedControl.FormsPlugin.Abstractions.deps.json
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/bin/Release/netstandard2.0/SegmentedControl.FormsPlugin.Abstractions.dll
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/bin/Release/netstandard2.0/SegmentedControl.FormsPlugin.Abstractions.pdb
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/obj/Release/netstandard2.0/SegmentedControl.FormsPlugin.Abstractions.csprojAssemblyReference.cache
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/obj/Release/netstandard2.0/SegmentedControl.FormsPlugin.Abstractions.AssemblyInfoInputs.cache
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/obj/Release/netstandard2.0/SegmentedControl.FormsPlugin.Abstractions.AssemblyInfo.cs
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/obj/Release/netstandard2.0/XamlC.stamp
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/obj/Release/netstandard2.0/SegmentedControl.FormsPlugin.Abstractions.dll
+/Users/bacnam/Projects/HoaPhuongHome/Apps/HoaPhuongHome/SegmentedControl/SegmentedControl.FormsPlugin.Abstractions/obj/Release/netstandard2.0/SegmentedControl.FormsPlugin.Abstractions.pdb

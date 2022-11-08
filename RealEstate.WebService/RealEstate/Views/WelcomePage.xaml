@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.WelcomePage">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         VerticalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="White" HeightRequest="568"
+                         VerticalOptions="CenterAndExpand">
+                    <AbsoluteLayout BackgroundColor="White">
+                        <Image Source="flow" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1"></Image>
+                        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                            <Image Source="logo" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
+                        </StackLayout>
+                    </AbsoluteLayout>
+                    <StackLayout Margin="0" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+                        <Label Text="Chào mừng trở lại" TextColor="#1D262C" HorizontalTextAlignment="Center" Margin="0,20,0,20" FontSize="Header"></Label>
+                        <Label Text="Đăng ký để bắt đầu sử dụng ứng dụng" TextColor="#71828A" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                        <Label Text="Hoặc đăng nhập nếu bạn đã có tài khoản" TextColor="#71828A" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                        <Grid Margin="20" ColumnSpacing="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" HeightRequest="44" BackgroundColor="White"
+                                    Command="{Binding LoginFacebookCommand}"
+                                    BorderWidth="1" BorderColor="#3B5998"
+                                    ImageSource="facebook"></Button>
+                            <Button Grid.Column="1" HeightRequest="44"
+                                    Command="{Binding LoginGoogleCommand}"
+                                    BackgroundColor="White"
+                                    BorderWidth="1" BorderColor="#3B5998"
+                                    ImageSource="google"></Button>
+                        </Grid>
+                        <Button Margin="20,0,20,0" Text="Đăng ký bằng email"
+                                BackgroundColor="#FC9261" TextColor="White"
+                                Clicked="onRegister" Visual="Material"
+                                FontSize="Medium" HeightRequest="44"></Button>
+                        <Button Margin="20,10,20,0" Text="Đăng nhập bằng tài khoản có sẵn"
+                                Clicked="onLogin"
+                                BackgroundColor="White" TextColor="#626B70" FontSize="Small"
+                                VerticalOptions="CenterAndExpand"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout BackgroundColor="Black" Opacity="0.4"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         IsVisible="{Binding IsBusy}"
+                         VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="#FC9261" IsRunning="{Binding IsBusy}"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"></ActivityIndicator>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

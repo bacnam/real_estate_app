@@ -1,0 +1,3 @@
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\90\build.props
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\90\adb.props

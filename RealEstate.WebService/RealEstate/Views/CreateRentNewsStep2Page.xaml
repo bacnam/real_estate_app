@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RealEstate.Renderers"
+             x:Class="RealEstate.Views.CreateRentNewsStep2Page">
+    <ContentPage.Content>
+        <renderers:KeyboardView BackgroundColor="White" Visual="Material">
+            <Grid HeightRequest="64" Margin="20,24,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0" WidthRequest="40"
+                             Clicked="onBack" Margin="0"
+                             Source="back" HorizontalOptions="Start" VerticalOptions="Center"></ImageButton>
+                <Label Grid.Column="1" Text="{Binding RentNews.HeaderTitle}"
+                       FontSize="16" TextColor="#363636"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center">
+                </Label>
+                <Frame Grid.Column="2" CornerRadius="20" Margin="0"
+                       Padding="0" HorizontalOptions="End"
+                       HeightRequest="40" WidthRequest="40"
+                       BackgroundColor="#F5F5F7" BorderColor="#F5F5F5"
+                       HasShadow="False">
+                    <Label VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span TextColor="#363636"
+                                        Text="2"
+                                        FontSize="14"></Span>
+                                <Span TextColor="#A9A9BA"
+                                        FontSize="14"
+                                        Text="/3"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+            </Grid>
+            <StackLayout Margin="0">
+                <ScrollView Margin="0">
+                    <ScrollView.Content>
+                        <StackLayout Padding="10,0">
+                            <Label Text="Mô tả cơ bản"
+                                   Margin="10,0,10,20"
+                                   TextColor="#626B70" FontSize="16"></Label>
+                            <Entry Visual="Material" TextColor="#363636"
+                                   Opacity="0.5"
+                                   Text="{Binding RentNews.Title}" MaxLength="255"
+                                   Placeholder="Tiêu đề bài đăng" PlaceholderColor="#A9A9BA"></Entry>
+                            <StackLayout Margin="0,10">
+                                <AbsoluteLayout>
+                                    <Entry Visual="Material" TextColor="#363636"
+                                           AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Keyboard="Numeric" Opacity="0.5"
+                                           IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
+                                           Text="{Binding RentNews.Acreage}"
+                                           Placeholder="Diện tích" PlaceholderColor="#A9A9BA"></Entry>
+                                    <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                 AbsoluteLayout.LayoutFlags="All"
+                                                 VerticalOptions="Center"
+                                                 Margin="0,0,10,0" Spacing="0"
+                                                 HorizontalOptions="End">
+                                        <Label Text="Đơn vị" VerticalTextAlignment="End" TextColor="#A9A9BA"
+                                               FontSize="10" Margin="0,0,0,2"></Label>
+                                        <Label Text="m2" VerticalTextAlignment="Start"
+                                               HorizontalTextAlignment="End" TextColor="#363636"
+                                               FontSize="14"></Label>
+                                    </StackLayout>
+                                </AbsoluteLayout>
+                            </StackLayout>
+                            <Grid ColumnSpacing="10" RowSpacing="0" Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Entry Grid.Column="0" Visual="Material"
+                                       TextColor="#363636" FontSize="14"
+                                       Opacity="0.5"
+                                       IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
+                                       Text="{Binding RentNews.Price}" Keyboard="Numeric"
+                                       Placeholder="Giá" PlaceholderColor="#A9A9BA"></Entry>
+                                <Grid Grid.Column="1" BackgroundColor="#F6F6F6" Padding="10,0"
+                                      ColumnSpacing="0" RowSpacing="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="34"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="24"></RowDefinition>
+                                        <RowDefinition Height="24"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Visual="Material" FontSize="10"
+                                           Grid.Column="0" Grid.Row="0"
+                                           VerticalTextAlignment="End"
+                                           Opacity="0.5"
+                                           Text="Đơn vị" TextColor="#A9A9BA"></Label>
+                                    <Label Visual="Material" FontSize="14"
+                                           VerticalTextAlignment="Start"
+                                           Grid.Column="0" Grid.Row="1"
+                                           Text="{Binding RentNews.UnitPrice.Name}" TextColor="#626B70"></Label>
+                                    <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
+                                           Aspect="AspectFit" Margin="20,10,0,10"
+                                           Source="forward"></Image>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="onTapedUnitPrice"></TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </Grid>
+                            <Grid Margin="0,10" ColumnSpacing="0" RowSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start"
+                                       Text="Thêm ảnh" TextColor="#A9A9BA" FontSize="10"></Label>
+                                <Label Grid.Column="1"
+                                       HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"
+                                       Text="*Tối đa 5 ảnh" TextColor="#A9A9BA" FontSize="10"></Label>
+                            </Grid>
+                            <Grid ColumnSpacing="0" RowSpacing="0" Padding="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <ImageButton Grid.Column="0"
+                                             Source="plus"
+                                             BackgroundColor="#F6F6F6"
+                                             HeightRequest="50"
+                                             WidthRequest="50"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Center"
+                                             BorderWidth="0"
+                                             Padding="8" Clicked="onAddImageClicked"
+                                             CornerRadius="25"></ImageButton>
+                                <ImageButton Grid.Column="1"
+                                             Source="plus"
+                                             BackgroundColor="#F6F6F6"
+                                             HeightRequest="50"
+                                             WidthRequest="50"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Center"
+                                             BorderWidth="0"
+                                             Padding="8" Clicked="onAddImageClicked"
+                                             CornerRadius="25"></ImageButton>
+                                <ImageButton Grid.Column="2"
+                                             Source="plus"
+                                             BackgroundColor="#F6F6F6"
+                                             HeightRequest="50"
+                                             WidthRequest="50"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Center"
+                                             BorderWidth="0"
+                                             Padding="8" Clicked="onAddImageClicked"
+                                             CornerRadius="25"></ImageButton>
+                                <ImageButton Grid.Column="3"
+                                             Source="plus"
+                                             BackgroundColor="#F6F6F6"
+                                             HeightRequest="50"
+                                             WidthRequest="50"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Center"
+                                             BorderWidth="0"
+                                             Padding="8" Clicked="onAddImageClicked"
+                                             CornerRadius="25"></ImageButton>
+                                <ImageButton Grid.Column="4"
+                                             Source="plus"
+                                             BackgroundColor="#F6F6F6"
+                                             HeightRequest="50"
+                                             WidthRequest="50"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Center"
+                                             BorderWidth="0"
+                                             Padding="8" Clicked="onAddImageClicked"
+                                             CornerRadius="25"></ImageButton>
+                            </Grid>
+                            <Frame HeightRequest="150" HasShadow="False" BorderColor="#F6F6F6"
+                                   Visual="Default" Padding="5" Margin="0,0,0,5" CornerRadius="8"
+                                   BackgroundColor="#F6F6F6">
+                                <StackLayout Spacing="0" Padding="0">
+                                    <Label Text="Nội dung mô tả" TextColor="#A9A9BA"
+                                           FontSize="10" Margin="5,10,0,0"></Label>
+                                    <Editor Visual="Default" TextColor="#363636"
+                                            HeightRequest="100" Opacity="0.5"
+                                            Text="{Binding RentNews.Desciption}" BackgroundColor="#F6F6F6"
+                                            IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
+                                            Placeholder="Nội dung mô tả" PlaceholderColor="#363636"></Editor>
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="Thông tin khác"
+                                   Margin="10,20,10,20"
+                                   TextColor="#626B70" FontSize="16"></Label>
+                            <Grid Margin="0,10" Visual="Default" RowSpacing="0" ColumnSpacing="30">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout Spacing="0" Grid.Column="0">
+                                    <Label Text="Số tầng" TextColor="#363636"
+                                           HeightRequest="20"
+                                           FontSize="10" Margin="10,0,0,0"></Label>
+                                    <Frame HeightRequest="34" HasShadow="False" Padding="0"
+                                           BorderColor="#F6F6F6" Margin="0">
+                                        <Grid ColumnSpacing="0" RowSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="34"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="34"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Button Grid.Column="0" Visual="Default" Text="-"
+                                                    FontSize="16" TextColor="#363636"
+                                                    Command="{Binding RoomSubCommand}"></Button>
+                                            <renderers:NoBorderEntry Grid.Column="1" BackgroundColor="#F6F6F6"
+                                                                     Text="{Binding RentNews.Room}"
+                                                                     VerticalTextAlignment="Center"
+                                                                     HorizontalTextAlignment="Center"
+                                                                     Visual="Default" Keyboard="Numeric"></renderers:NoBorderEntry>
+                                            <Button Grid.Column="2" Visual="Default" Text="+"
+                                                    FontSize="16" TextColor="#363636"
+                                                    Command="{Binding RoomAddCommand}"></Button>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout Spacing="0" Grid.Column="1">
+                                    <Label Text="Số phòng ngủ" TextColor="#363636"
+                                           HeightRequest="20"
+                                           FontSize="10" Margin="10,0,0,0"></Label>
+                                    <Frame HeightRequest="34" HasShadow="False" Padding="0"
+                                           BorderColor="#F6F6F6" Margin="0">
+                                        <Grid ColumnSpacing="0" RowSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="34"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="34"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Button Grid.Column="0" Visual="Default" Text="-"
+                                                    FontSize="16" TextColor="#363636"
+                                            Command="{Binding FloorSubCommand}"></Button>
+                                            <renderers:NoBorderEntry Grid.Column="1" BackgroundColor="#F6F6F6"
+                                                                     Text="{Binding RentNews.Floor}"
+                                                                     VerticalTextAlignment="Center"
+                                                                     HorizontalTextAlignment="Center"
+                                                                     Visual="Default" Keyboard="Numeric"></renderers:NoBorderEntry>
+                                            <Button Grid.Column="2" Visual="Default" Text="+"
+                                                    TextColor="#363636" FontSize="16"
+                                                    Command="{Binding FloorAddCommand}"></Button>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </Grid>
+                            <StackLayout Margin="10">
+                                <Grid HeightRequest="34">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="34"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Hướng nhà" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="{Binding RentNews.Direction.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                    </StackLayout>
+                                    <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="DirectionTapped"></TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView.Content>
+                </ScrollView>
+                <Button Clicked="onContinute" Visual="Default"
+                        Text="Tiếp tục" HeightRequest="44" Margin="10,20,10,10"
+                        TextColor="White" BackgroundColor="#FC9261"></Button>
+            </StackLayout>
+        </renderers:KeyboardView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.CalculatePricePage">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Grid HeightRequest="40" Margin="20,24,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0"
+                             WidthRequest="40"
+                             Clicked="onBack"
+                             Source="back"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"></ImageButton>
+            </Grid>
+            <Label Text="Dự toán chi phí" Margin="10,20"></Label>
+            <StackLayout Spacing="0">
+                <ScrollView>
+                    <ScrollView.Content>
+                        <StackLayout Padding="10,0,10,20" Margin="0" Spacing="0">
+                            <StackLayout Margin="0,10">
+                                <AbsoluteLayout>
+                                    <Entry Visual="Material" TextColor="#363636"
+                                           AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Keyboard="Numeric" Opacity="0.5"
+                                           IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
+                                           Text="{Binding DuTinh.Width}"
+                                           Placeholder="Chiều dài" PlaceholderColor="#A9A9BA"></Entry>
+                                    <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                 AbsoluteLayout.LayoutFlags="All"
+                                                 VerticalOptions="Center"
+                                                 Margin="0,0,10,0" Spacing="0"
+                                                 HorizontalOptions="End">
+                                        <Label Text="Đơn vị" VerticalTextAlignment="End" TextColor="#A9A9BA"
+                                               FontSize="10" Margin="0,0,0,2"></Label>
+                                        <Label Text="m" VerticalTextAlignment="Start"
+                                               HorizontalTextAlignment="End" TextColor="#363636"
+                                               FontSize="14"></Label>
+                                    </StackLayout>
+                                </AbsoluteLayout>
+                            </StackLayout>
+                            <StackLayout Margin="0,10">
+                                <AbsoluteLayout>
+                                    <Entry Visual="Material" TextColor="#363636"
+                                           AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Keyboard="Numeric" Opacity="0.5"
+                                           IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
+                                           Text="{Binding DuTinh.Height}"
+                                           Placeholder="Chiều rộng" PlaceholderColor="#A9A9BA"></Entry>
+                                    <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                 AbsoluteLayout.LayoutFlags="All"
+                                                 VerticalOptions="Center"
+                                                 Margin="0,0,10,0" Spacing="0"
+                                                 HorizontalOptions="End">
+                                        <Label Text="Đơn vị" VerticalTextAlignment="End" TextColor="#A9A9BA"
+                                               FontSize="10" Margin="0,0,0,2"></Label>
+                                        <Label Text="m" VerticalTextAlignment="Start"
+                                               HorizontalTextAlignment="End" TextColor="#363636"
+                                               FontSize="14"></Label>
+                                    </StackLayout>
+                                </AbsoluteLayout>
+                            </StackLayout>
+                            <Entry Visual="Material" TextColor="#363636"
+                                   Opacity="0.5" Margin="0,10"
+                                   Text="{Binding DuTinh.Floor}" Keyboard="Numeric"
+                                   Placeholder="Số tầng" PlaceholderColor="#A9A9BA"></Entry>
+                            <Grid Margin="0,30,0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="34"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Label Text="Loại mái nhà" TextColor="#A9A9BA" FontSize="10"></Label>
+                                    <Label Text="{Binding DuTinh.Roof.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                </StackLayout>
+                                <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="RoofTapped"></TapGestureRecognizer>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                            <Grid Margin="0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="34"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Label Text="Loại móng nhà" TextColor="#A9A9BA" FontSize="10"></Label>
+                                    <Label Text="{Binding DuTinh.Substructure.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                </StackLayout>
+                                <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="SubstructureTapped"></TapGestureRecognizer>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                            <Grid Margin="0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="34"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Label Text="Loại vật tư" TextColor="#A9A9BA" FontSize="10"></Label>
+                                    <Label Text="{Binding DuTinh.Material.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
+                                </StackLayout>
+                                <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MaterialTapped"></TapGestureRecognizer>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView.Content>
+                </ScrollView>
+            </StackLayout>
+            <Button CornerRadius="0" Text="Dự toán chi phí"
+                    Clicked="onDoneClicked"
+                    BackgroundColor="#FC9261" TextColor="White"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

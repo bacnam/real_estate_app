@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstate.Views.ComingSoonPage">
+    <ContentPage.Content>
+        <StackLayout Margin="0"
+                     BackgroundColor="Transparent"
+                     VerticalOptions="StartAndExpand" Padding="0">
+            <Grid HeightRequest="40" Margin="20,24,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton Grid.Column="0" Padding="0"
+                             WidthRequest="40"
+                             Clicked="onBack"
+                             Source="back"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"></ImageButton>
+            </Grid>
+            <Label TextColor="#626B70"
+                   Margin="20"
+                   FontSize="16"
+                   Text="Sẽ ra mắt sớm"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

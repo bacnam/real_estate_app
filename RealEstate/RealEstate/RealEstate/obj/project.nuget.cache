@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "akrkAtBrSKaALQc6D9ATAsOxpF+OWnnnyyVilV6zSIV3WKvOHQK1tf4omqYgeha10wS4EoAO0EHsYKf2tJcKKg==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\real_estate_app\\RealEstate\\RealEstate\\RealEstate\\RealEstate.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\plugin.facebookclient\\4.0.1\\plugin.facebookclient.4.0.1.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\plugin.googleclient\\2.1.12\\plugin.googleclient.2.1.12.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2196\\xamarin.forms.maps.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2196\\xamarin.forms.visual.material.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
