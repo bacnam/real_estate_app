@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iaaunK1uo5yXOogTTzG058FpiHNAZ7nrtWKsm1FyZgmZ2M2rJ3+Ow4WHQqV4p6E+L+qIER04FYHEzlK4fe/EOA==",
+  "dgSpecHash": "+wM0RtcYmgYVmItkbXpAioVytcKmTXx7wxmOJsBdVHYmfr3Gs6S/YTIfb4wU8Y2z272tOX4EwTSOvASJpxPojA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\real_estate_app\\RealEstate\\RealEstate\\RealEstate.Android\\RealEstate.Android.csproj",
   "expectedPackageFiles": [
@@ -121,5 +121,16 @@
     "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk7\\1.5.10\\xamarin.kotlin.stdlib.jdk7.1.5.10.nupkg.sha512",
     "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.5.10\\xamarin.kotlin.stdlib.jdk8.1.5.10.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.4 to 1.7.0. Reference the package directly from the project to select a different version. \r\n RealEstate.Android -> RealEstate -> Xamarin.Essentials (>= 1.7.4) \r\n RealEstate.Android -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v12.0"
+      ]
+    }
+  ]
 }

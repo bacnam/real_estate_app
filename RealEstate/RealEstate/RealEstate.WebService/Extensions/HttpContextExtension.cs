@@ -8,6 +8,7 @@
             if (authHeader != null && authHeader.StartsWith("Bearer ", StringComparison.Ordinal))
             {
                 string token = authHeader.Replace("Bearer ", "", StringComparison.Ordinal);
+                Console.WriteLine(token);
                 return token.TrimStart();
             }
             return string.Empty;

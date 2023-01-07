@@ -46,13 +46,13 @@
                 <ScrollView Margin="0">
                     <ScrollView.Content>
                         <StackLayout Padding="10,0">
-                            <Label Text="Mô tả cơ bản"
+                            <Label Text="Basic description"
                                    Margin="10,0,10,20"
                                    TextColor="#626B70" FontSize="16"></Label>
                             <Entry Visual="Material" TextColor="#363636"
                                    Opacity="0.5"
                                    Text="{Binding RentNews.Title}" MaxLength="255"
-                                   Placeholder="Tiêu đề bài đăng" PlaceholderColor="#A9A9BA"></Entry>
+                                   Placeholder="Topic" PlaceholderColor="#A9A9BA"></Entry>
                             <StackLayout Margin="0,10">
                                 <AbsoluteLayout>
                                     <Entry Visual="Material" TextColor="#363636"
@@ -61,13 +61,13 @@
                                            Keyboard="Numeric" Opacity="0.5"
                                            IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
                                            Text="{Binding RentNews.Acreage}"
-                                           Placeholder="Diện tích" PlaceholderColor="#A9A9BA"></Entry>
+                                           Placeholder="Area" PlaceholderColor="#A9A9BA"></Entry>
                                     <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1"
                                                  AbsoluteLayout.LayoutFlags="All"
                                                  VerticalOptions="Center"
                                                  Margin="0,0,10,0" Spacing="0"
                                                  HorizontalOptions="End">
-                                        <Label Text="Đơn vị" VerticalTextAlignment="End" TextColor="#A9A9BA"
+                                        <Label Text="Unit" VerticalTextAlignment="End" TextColor="#A9A9BA"
                                                FontSize="10" Margin="0,0,0,2"></Label>
                                         <Label Text="m2" VerticalTextAlignment="Start"
                                                HorizontalTextAlignment="End" TextColor="#363636"
@@ -85,7 +85,7 @@
                                        Opacity="0.5"
                                        IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
                                        Text="{Binding RentNews.Price}" Keyboard="Numeric"
-                                       Placeholder="Giá" PlaceholderColor="#A9A9BA"></Entry>
+                                       Placeholder="Price" PlaceholderColor="#A9A9BA"></Entry>
                                 <Grid Grid.Column="1" BackgroundColor="#F6F6F6" Padding="10,0"
                                       ColumnSpacing="0" RowSpacing="5">
                                     <Grid.ColumnDefinitions>
@@ -100,7 +100,7 @@
                                            Grid.Column="0" Grid.Row="0"
                                            VerticalTextAlignment="End"
                                            Opacity="0.5"
-                                           Text="Đơn vị" TextColor="#A9A9BA"></Label>
+                                           Text="Unit" TextColor="#A9A9BA"></Label>
                                     <Label Visual="Material" FontSize="14"
                                            VerticalTextAlignment="Start"
                                            Grid.Column="0" Grid.Row="1"
@@ -120,10 +120,10 @@
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Column="0"
                                        HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start"
-                                       Text="Thêm ảnh" TextColor="#A9A9BA" FontSize="10"></Label>
+                                       Text="Add picture" TextColor="#A9A9BA" FontSize="10"></Label>
                                 <Label Grid.Column="1"
                                        HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"
-                                       Text="*Tối đa 5 ảnh" TextColor="#A9A9BA" FontSize="10"></Label>
+                                       Text="*Maximum 5 pictures" TextColor="#A9A9BA" FontSize="10"></Label>
                             </Grid>
                             <Grid ColumnSpacing="0" RowSpacing="0" Padding="0,10">
                                 <Grid.ColumnDefinitions>
@@ -188,16 +188,16 @@
                                    Visual="Default" Padding="5" Margin="0,0,0,5" CornerRadius="8"
                                    BackgroundColor="#F6F6F6">
                                 <StackLayout Spacing="0" Padding="0">
-                                    <Label Text="Nội dung mô tả" TextColor="#A9A9BA"
+                                    <Label Text="Description content" TextColor="#A9A9BA"
                                            FontSize="10" Margin="5,10,0,0"></Label>
                                     <Editor Visual="Default" TextColor="#363636"
                                             HeightRequest="100" Opacity="0.5"
                                             Text="{Binding RentNews.Desciption}" BackgroundColor="#F6F6F6"
                                             IsSpellCheckEnabled="False" IsTextPredictionEnabled="False"
-                                            Placeholder="Nội dung mô tả" PlaceholderColor="#363636"></Editor>
+                                            Placeholder="Description content" PlaceholderColor="#363636"></Editor>
                                 </StackLayout>
                             </Frame>
-                            <Label Text="Thông tin khác"
+                            <Label Text="Other information"
                                    Margin="10,20,10,20"
                                    TextColor="#626B70" FontSize="16"></Label>
                             <Grid Margin="0,10" Visual="Default" RowSpacing="0" ColumnSpacing="30">
@@ -209,7 +209,7 @@
                                     <RowDefinition Height="54"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <StackLayout Spacing="0" Grid.Column="0">
-                                    <Label Text="Số tầng" TextColor="#363636"
+                                    <Label Text="Number of floor" TextColor="#363636"
                                            HeightRequest="20"
                                            FontSize="10" Margin="10,0,0,0"></Label>
                                     <Frame HeightRequest="34" HasShadow="False" Padding="0"
@@ -235,7 +235,7 @@
                                     </Frame>
                                 </StackLayout>
                                 <StackLayout Spacing="0" Grid.Column="1">
-                                    <Label Text="Số phòng ngủ" TextColor="#363636"
+                                    <Label Text="Number of bed" TextColor="#363636"
                                            HeightRequest="20"
                                            FontSize="10" Margin="10,0,0,0"></Label>
                                     <Frame HeightRequest="34" HasShadow="False" Padding="0"
@@ -268,7 +268,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Hướng nhà" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="The direction of the home" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RentNews.Direction.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -281,7 +281,7 @@
                     </ScrollView.Content>
                 </ScrollView>
                 <Button Clicked="onContinute" Visual="Default"
-                        Text="Tiếp tục" HeightRequest="44" Margin="10,20,10,10"
+                        Text="Continuos" HeightRequest="44" Margin="10,20,10,10"
                         TextColor="White" BackgroundColor="#FC9261"></Button>
             </StackLayout>
         </renderers:KeyboardView>

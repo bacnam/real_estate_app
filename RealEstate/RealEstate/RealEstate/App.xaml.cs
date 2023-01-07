@@ -23,7 +23,7 @@ namespace RealEstate
             DependencyService.Register<IRealEstateService, RealEstateService>();
             DependencyService.Register<IProjectService, ProjectService>();
 
-            InitAsync().Wait();
+            InitAsync();
         }
 
         protected override void OnStart()

@@ -19,7 +19,7 @@
                              HorizontalOptions="Start"
                              VerticalOptions="Center"></ImageButton>
             </Grid>
-            <Label Text="Danh mục tiện ích"
+            <Label Text="Utilities list"
                    TextColor="#626B70"
                    Margin="10,20"
                    FontSize="16"></Label>
@@ -36,7 +36,7 @@
                        BackgroundColor="White" Padding="0">
                     <StackLayout Spacing="10">
                         <Image Source="calculator" Margin="0,40,0,0"></Image>
-                        <Label Text="Dự toán chi phí" TextColor="#88969D"
+                        <Label Text="Cost estimates" TextColor="#88969D"
                                Margin="0"
                                HorizontalTextAlignment="Center" FontSize="13"></Label>
                         <StackLayout.GestureRecognizers>
@@ -49,7 +49,7 @@
                        BackgroundColor="White" Padding="0">
                     <StackLayout Spacing="10">
                         <Image Source="bat_quai" Margin="0,40,0,0"></Image>
-                        <Label Text="Tử vi phong thủy" TextColor="#88969D"
+                        <Label Text="Horoscope Feng Shui" TextColor="#88969D"
                                Margin="0"
                                HorizontalTextAlignment="Center" FontSize="13"></Label>
                         <StackLayout.GestureRecognizers>

@@ -1,14 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using RealEstate.WebService.Databases;
+using RealEstate.WebService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IAddressService, AddressService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IRealEstateService, RealEstateService>();
+builder.Services.AddScoped<ISearchService, SearchService>();
+builder.Services.AddScoped<INewsService, NewsService>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<IImageService, ImageService>();
 
 // Add services to the container.
 
 builder.Services.AddDbContext<LibraryContext>(option =>
 {
-    ConfigurationManager configurationManager = new ConfigurationManager();
-    string connectionString = configurationManager.GetConnectionString("Database");
+    string connectionString = builder.Configuration.GetConnectionString("Database");
     option.UseMySQL(connectionString);
 });
 

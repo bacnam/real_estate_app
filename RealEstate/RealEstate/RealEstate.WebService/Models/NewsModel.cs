@@ -3,7 +3,7 @@ using MySql.EntityFrameworkCore.DataAnnotations;
 
 namespace RealEstate.WebService.Models
 {
-    [Table("tin")]
+    [Table("news")]
     [MySqlCharset("utf8")]
     public class NewsModel : BaseModel
     {

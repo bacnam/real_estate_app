@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.realestate" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
-	<application android:label="RealEstate.Android" android:theme="@style/MainTheme"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.baonguyen.realestate" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26" />
+	<application android:label="RealEstate" android:theme="@style/MainTheme" android:icon="@drawable/logo_white">
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_application_id" />
+	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />

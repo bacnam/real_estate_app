@@ -29,7 +29,7 @@
                 <StackLayout Orientation="Horizontal" Padding="0,10,0,20">
                     <StackLayout Spacing="0" Padding="20,0" BackgroundColor="White">
                         <Label BackgroundColor="White" TextColor="#626B70"
-                               Text="Tìm kiếm dự án"></Label>
+                               Text="Project finding"></Label>
                         <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
                                  HorizontalOptions="Start"></BoxView>
                     </StackLayout>
@@ -47,7 +47,7 @@
                                 <ColumnDefinition Width="34"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <StackLayout Grid.Column="0">
-                                <Label Text="Tỉnh/Thành phố" TextColor="#A9A9BA" FontSize="10"></Label>
+                                <Label Text="City" TextColor="#A9A9BA" FontSize="10"></Label>
                                 <Label Text="{Binding CitySelectedString}" TextColor="#1D1D1D" FontSize="14"></Label>
                             </StackLayout>
                             <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -63,7 +63,7 @@
                                 <ColumnDefinition Width="34"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <StackLayout Grid.Column="0">
-                                <Label Text="Quận/huyện" TextColor="#A9A9BA" FontSize="10"></Label>
+                                <Label Text="State" TextColor="#A9A9BA" FontSize="10"></Label>
                                 <Label Text="{Binding DistrictSelectedString}" TextColor="#1D1D1D" FontSize="14"></Label>
                             </StackLayout>
                             <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -73,7 +73,7 @@
                         </Grid>
                     </StackLayout>
                     <Button Grid.Row="2" Visual="Material" Clicked="onSearch"
-                            Margin="0,0,0,0" Text="Tìm kiếm" HeightRequest="40"
+                            Margin="0,0,0,0" Text="Find" HeightRequest="40"
                             TextColor="White" BackgroundColor="#FC9261"></Button>
                 </Grid>
             </StackLayout>

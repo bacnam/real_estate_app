@@ -206,7 +206,7 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.7.0, )"
+              "version": "[1.7.4, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

@@ -20,7 +20,7 @@ namespace RealEstate.WebService.Services
         Task LogoutAsync(string token);
         Task<RegisterResponse> RegisterAsync(RegisterRequest request);
         Task<GetAccountResponse> GetAccountAsync(string token);
-        UserModel GetAccountFromToken(string token);
+        UserModel? GetAccountFromToken(string token);
         string GenerateToken(UserModel account);
         Task<GetNotificationResponse> GetNotificationAsync(long accountId);
         Task<ReadNotificationResponse> ReadNotificationAsync(long notificationId);
@@ -151,7 +151,7 @@ namespace RealEstate.WebService.Services
             }
         }
 
-        public UserModel GetAccountFromToken(string token)
+        public UserModel? GetAccountFromToken(string token)
         {
             if (string.IsNullOrEmpty(token))
             {

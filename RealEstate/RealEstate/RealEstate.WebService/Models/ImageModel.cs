@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RealEstate.WebService.Models
 {
-    [Table("hinhanh")]
+    [Table("images")]
     [MySqlCharset("utf8")]
     public class ImageModel : BaseModel
     {

@@ -1,0 +1,13 @@
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\actool\_ProcessedImageAssetsPath.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\_ProcessedBundleResourcesPath.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\_ProcessedContentPath.items
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\RealEstate.iOS.csproj.AssemblyReference.cache
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.iOS\obj\iPhoneSimulator\Debug\RealEstate.iOS.csproj.CoreCompileInputs.cache

@@ -12,33 +12,42 @@
                     <AbsoluteLayout BackgroundColor="White">
                         <Image Source="flow" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1"></Image>
                         <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
-                            <Image Source="logo" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
+                            <Image Source="logo" WidthRequest="200"></Image>
                         </StackLayout>
                     </AbsoluteLayout>
                     <StackLayout Margin="0" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
-                        <Label Text="Chào mừng trở lại" TextColor="#1D262C" HorizontalTextAlignment="Center" Margin="0,20,0,20" FontSize="Header"></Label>
-                        <Label Text="Đăng ký để bắt đầu sử dụng ứng dụng" TextColor="#71828A" HorizontalTextAlignment="Center" FontSize="Small"></Label>
-                        <Label Text="Hoặc đăng nhập nếu bạn đã có tài khoản" TextColor="#71828A" HorizontalTextAlignment="Center" FontSize="Small"></Label>
+                        <Label Text="Welcome back" TextColor="#1D262C" HorizontalTextAlignment="Center" Margin="0,20,0,20" FontSize="Title"></Label>
+                        <Label Text="Sign up to start using the app" TextColor="#71828A" HorizontalTextAlignment="Center" FontSize="Subtitle"></Label>
+                        <Label Text="Or login if you already have an account." TextColor="#71828A" HorizontalTextAlignment="Center" FontSize="Subtitle"></Label>
                         <Grid Margin="20" ColumnSpacing="20">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="5*"></ColumnDefinition>
                                 <ColumnDefinition Width="5*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="44"></RowDefinition>
+                            </Grid.RowDefinitions>
                             <Button Grid.Column="0" HeightRequest="44" BackgroundColor="White"
+                                    Padding="10,0"
                                     Command="{Binding LoginFacebookCommand}"
+                                    Text="Login with Facebook"
+                                    TextColor="#3B5998"
                                     BorderWidth="1" BorderColor="#3B5998"
                                     ImageSource="facebook"></Button>
                             <Button Grid.Column="1" HeightRequest="44"
+                                    Padding="10,0"
+                                    Text="Login with Google"
+                                    TextColor="#3B5998"
                                     Command="{Binding LoginGoogleCommand}"
                                     BackgroundColor="White"
                                     BorderWidth="1" BorderColor="#3B5998"
                                     ImageSource="google"></Button>
                         </Grid>
-                        <Button Margin="20,0,20,0" Text="Đăng ký bằng email"
+                        <Button Margin="20,0,20,0" Text="Sign up by Email"
                                 BackgroundColor="#FC9261" TextColor="White"
                                 Clicked="onRegister" Visual="Material"
                                 FontSize="Medium" HeightRequest="44"></Button>
-                        <Button Margin="20,10,20,0" Text="Đăng nhập bằng tài khoản có sẵn"
+                        <Button Margin="20,10,20,0" Text="Sign in with an existing account"
                                 Clicked="onLogin"
                                 BackgroundColor="White" TextColor="#626B70" FontSize="Small"
                                 VerticalOptions="CenterAndExpand"></Button>

@@ -5,8 +5,8 @@
     Changes to this file may cause incorrect behavior and will be lost if
     the contents are regenerated.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.companyname.realestate" android:installLocation="auto" android:versionCode="1" android:versionName="1.0">
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.baonguyen.realestate" android:installLocation="auto" android:versionCode="1" android:versionName="1.0">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-feature android:name="android.hardware.camera" android:required="false" />
@@ -23,7 +23,8 @@
   </queries>
   <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
   <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-  <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/icon" android:label="RealEstate.Android" android:supportsRtl="true" android:theme="@style/MainTheme">
+  <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@drawable/logo_white" android:label="RealEstate" android:supportsRtl="true" android:theme="@style/MainTheme">
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_application_id" />
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:name="crc648af41fd8f4521fd2.MainActivity" android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:icon="@mipmap/icon" android:label="RealEstate" android:theme="@style/MainTheme">
       <intent-filter>
@@ -37,12 +38,12 @@
     <receiver android:name="crc64a0e0a82d0db9a07d.EnergySaverBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" />
     <receiver android:name="crc64a0e0a82d0db9a07d.ConnectivityBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Connectivity Broadcast Receiver" />
     <activity android:name="crc64a0e0a82d0db9a07d.IntermediateActivity" android:configChanges="orientation|screenSize" />
-    <provider android:name="xamarin.essentials.fileProvider" android:authorities="com.companyname.realestate.fileProvider" android:exported="false" android:grantUriPermissions="true">
+    <provider android:name="xamarin.essentials.fileProvider" android:authorities="com.baonguyen.realestate.fileProvider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/xamarin_essentials_fileprovider_file_paths" />
     </provider>
     <activity android:name="crc64a0e0a82d0db9a07d.WebAuthenticatorIntermediateActivity" android:configChanges="orientation|screenSize" />
     <receiver android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" android:enabled="true" android:exported="false" />
-    <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.companyname.realestate.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" />
+    <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.baonguyen.realestate.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" />
     <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:theme="@style/com_facebook_activity_theme" />
     <activity android:name="com.facebook.CustomTabMainActivity" />
     <activity android:name="com.facebook.CustomTabActivity" android:exported="true" tools:node="merge">
@@ -50,7 +51,7 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:host="cct.com.companyname.realestate" android:scheme="fbconnect" />
+        <data android:host="cct.com.baonguyen.realestate" android:scheme="fbconnect" />
       </intent-filter>
     </activity>
     <!--
@@ -62,7 +63,7 @@
          following placeholder in the authority to identify each host application as if it was
          a completely different provider.
         -->
-    <provider android:name="com.facebook.internal.FacebookInitProvider" android:authorities="com.companyname.realestate.FacebookInitProvider" android:exported="false" />
+    <provider android:name="com.facebook.internal.FacebookInitProvider" android:authorities="com.baonguyen.realestate.FacebookInitProvider" android:exported="false" />
     <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
       <intent-filter>
         <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />

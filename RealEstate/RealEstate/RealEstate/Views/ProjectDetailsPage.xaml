@@ -26,7 +26,7 @@
                                 <StackLayout Spacing="0" Padding="20,0" BackgroundColor="White">
                                     <Label BackgroundColor="White" TextColor="#626B70"
                                             x:Name="lblSale"
-                                            Text="Chi tiết dự án"></Label>
+                                            Text="Project detail"></Label>
                                     <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
                                                 x:Name="lineSale"
                                                 HorizontalOptions="Start"></BoxView>
@@ -46,7 +46,7 @@
                                     </StackLayout.GestureRecognizers>
                                 </StackLayout>
                             </StackLayout>
-                            <Label Text="{Binding RealCount, StringFormat='Có {0:F0} tin rao về dự án này'}"
+                            <Label Text="{Binding RealCount, StringFormat='Have {0:F0} posts about this project'}"
                                        Margin="20,10" IsVisible="{Binding IsReal}"
                                        TextColor="#363636" FontSize="14"
                                        FontAttributes="Bold"></Label>
@@ -106,42 +106,42 @@
                                             Text="{Binding Project.Description}"></Label>
                                 </StackLayout>
                                 <StackLayout Margin="20,10">
-                                    <Label Text="Chủ đầu tư" FontSize="14"
+                                    <Label Text="Investor" FontSize="14"
                                             FontAttributes="Bold"
                                             TextColor="#363636"></Label>
                                     <Label FontSize="12" TextColor="#363636"
                                             Text="{Binding Project.Investor}"></Label>
                                 </StackLayout>
                                 <StackLayout Margin="20,10">
-                                    <Label Text="Diện tích đất" FontSize="14"
+                                    <Label Text="Land area" FontSize="14"
                                             FontAttributes="Bold"
                                             TextColor="#363636"></Label>
                                     <Label FontSize="12" TextColor="#363636"
                                             Text="{Binding Project.Acreage, StringFormat='{0:F0} m2'}"></Label>
                                 </StackLayout>
                                 <StackLayout Margin="20,10">
-                                    <Label Text="Diện tích sàn" FontSize="14"
+                                    <Label Text="Floor area" FontSize="14"
                                             FontAttributes="Bold"
                                             TextColor="#363636"></Label>
                                     <Label FontSize="12" TextColor="#363636"
                                             Text="{Binding Project.AcreageFloor, StringFormat='{0:F0} m2'}"></Label>
                                 </StackLayout>
                                 <StackLayout Margin="20,10">
-                                    <Label Text="Quy mô căn hộ" FontSize="14"
+                                    <Label Text="Size of the apartment" FontSize="14"
                                             FontAttributes="Bold"
                                             TextColor="#363636"></Label>
                                     <Label FontSize="12" TextColor="#363636"
                                             Text="{Binding Project.ApartmentNumber, StringFormat='{0:F0} căn'}"></Label>
                                 </StackLayout>
                                 <StackLayout Margin="20,10">
-                                    <Label Text="Số tầng" FontSize="14"
+                                    <Label Text="Number of floors" FontSize="14"
                                             FontAttributes="Bold"
                                             TextColor="#363636"></Label>
                                     <Label FontSize="12" TextColor="#363636"
-                                            Text="{Binding Project.Floor, StringFormat='{0:F0} tầng'}"></Label>
+                                            Text="{Binding Project.Floor, StringFormat='{0:F0} floor'}"></Label>
                                 </StackLayout>
                                 <StackLayout Margin="20,10">
-                                    <Label Text="Bàn giao dự kiến" FontSize="14"
+                                    <Label Text="Expected handover" FontSize="14"
                                             FontAttributes="Bold"
                                             TextColor="#363636"></Label>
                                     <Label FontSize="12" TextColor="#363636"

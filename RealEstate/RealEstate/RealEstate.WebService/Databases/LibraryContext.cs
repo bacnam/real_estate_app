@@ -99,7 +99,7 @@ namespace RealEstate.WebService.Databases
                 entity.Property(e => e.Latitude);
                 entity.Property(e => e.Longitude);
                 entity.Property(e => e.ProjectId);
-                entity.Property(e => e.IsSale).HasConversion<ushort>().HasDefaultValue(false);
+                entity.Property(e => e.IsSale).HasConversion<bool>().HasDefaultValue(false);
                 entity.HasMany(e => e.Images).WithOne(e => e.RealEstate);
                 entity.HasOne(e => e.Ward).WithMany().HasForeignKey("WardId");
                 entity.HasOne(e => e.Direction).WithMany().HasForeignKey("huong");
@@ -156,7 +156,7 @@ namespace RealEstate.WebService.Databases
             modelBuilder.Entity<NotificationModel>(entity => {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Sort);
-                entity.Property(e => e.IsRead).HasConversion<ushort>().HasDefaultValue(false);
+                entity.Property(e => e.IsRead).HasConversion<bool>().HasDefaultValue(false);
                 entity.Property(e => e.NewsId);
                 entity.Property(e => e.RealId);
                 entity.Property(e => e.Created);

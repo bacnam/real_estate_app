@@ -15,12 +15,12 @@
                              Source="back"
                                  HorizontalOptions="Start" VerticalOptions="Center"></ImageButton>
                 <StackLayout Margin="10,20,10,0">
-                    <Label Text="Nhập Email nhận tin:" TextColor="#626B70"
+                    <Label Text="Enter Email to receive news:" TextColor="#626B70"
                            FontSize="16" Margin="0,0,0,20"></Label>
                     <renderers:NoBorderEntry HeightRequest="44" FontSize="14"
                                              Text="{Binding RegisterNews.Email}"
                                              BackgroundColor="#F6F6F6" TextColor="#A9A9BA"
-                                             Placeholder="Địa chỉ Email"></renderers:NoBorderEntry>
+                                             Placeholder="Email"></renderers:NoBorderEntry>
                 </StackLayout>
                 <Button BackgroundColor="#FC9261"
                         VerticalOptions="EndAndExpand"

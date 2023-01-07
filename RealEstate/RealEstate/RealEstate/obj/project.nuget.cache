@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "akrkAtBrSKaALQc6D9ATAsOxpF+OWnnnyyVilV6zSIV3WKvOHQK1tf4omqYgeha10wS4EoAO0EHsYKf2tJcKKg==",
+  "dgSpecHash": "tLQCZIL2plFoOPCIdflLj4aSRXJhLVeURUNc0d0HH4Fu5NZygOBgc0AOZcsINM0K0kRDtoe+rf9xmyJYDcQDtg==",
   "success": true,
   "projectFilePath": "C:\\Projects\\real_estate_app\\RealEstate\\RealEstate\\RealEstate\\RealEstate.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,7 @@
     "C:\\Users\\AdministratorUSA\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
     "C:\\Users\\AdministratorUSA\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
-    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.essentials\\1.7.4\\xamarin.essentials.1.7.4.nupkg.sha512",
     "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2196\\xamarin.forms.maps.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\AdministratorUSA\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2196\\xamarin.forms.visual.material.5.0.0.2196.nupkg.sha512"

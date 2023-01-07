@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.OS;
 using Plugin.GoogleClient;
 using Plugin.CurrentActivity;
+using Plugin.FacebookClient;
 
 namespace RealEstate.Droid
 {
@@ -21,6 +22,7 @@ namespace RealEstate.Droid
 
             //SegmentedControlRenderer.Init();
             GoogleClientManager.Initialize(this);
+            FacebookClientManager.Initialize(this);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.SetFlags("Visual_Experimental", "CollectionView_Experimental", "CarouselView_Experimental", "IndicatorView_Experimental");
@@ -44,6 +46,7 @@ namespace RealEstate.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
             GoogleClientManager.OnAuthCompleted(requestCode, resultCode, data);
+            FacebookClientManager.OnActivityResult(requestCode, resultCode, data);
         }
     }
 }

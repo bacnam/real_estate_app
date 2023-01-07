@@ -24,7 +24,7 @@
             <Label TextColor="#626B70"
                    Margin="20"
                    FontSize="16"
-                   Text="Sẽ ra mắt sớm"></Label>
+                   Text="Coming soon"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

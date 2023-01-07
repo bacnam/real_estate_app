@@ -65,7 +65,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Loại bất động sản" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="Type of your home" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RentNews.RealType.Title}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -81,7 +81,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Tỉnh/Thành phố" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="City" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RentNews.City.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -97,7 +97,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Quận/huyện" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="State" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RentNews.District.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -113,7 +113,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Xã/phường" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="Country" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RentNews.Ward.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -129,7 +129,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Dự án" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="Project" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RentNews.Project.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -139,7 +139,7 @@
                                 </Grid>
                             </StackLayout>
                             <StackLayout Margin="10">
-                                <Label Text="Vị trí trên bản đồ" TextColor="#A9A9BA" FontSize="10"></Label>
+                                <Label Text="Location on the map" TextColor="#A9A9BA" FontSize="10"></Label>
                                 <StackLayout Orientation="Horizontal" HeightRequest="34"
                                              Padding="0" Margin="0,10,0,0" Spacing="0">
                                     <Label Text="{Binding RentNews.Latitude, StringFormat='{0:F7}/'}" TextColor="#1D1D1D" FontSize="14"></Label>
@@ -157,7 +157,7 @@
                     </ScrollView.Content>
                 </ScrollView>
                 <Button Clicked="onContinute"
-                        Margin="0,10,0,10" Text="Tiếp tục"
+                        Margin="0,10,0,10" Text="Continuos"
                         TextColor="White" BackgroundColor="#FC9261"></Button>
             </StackLayout>
         </renderers:KeyboardView>

@@ -116,7 +116,7 @@ namespace RealEstate.ViewModels
                 var service = DependencyService.Get<IUserService>();
                 await service.LogoutAsync();
                 Xamarin.Essentials.SecureStorage.Remove("token");
-                await (Application.Current as App).InitAsync(true);
+                (Application.Current as App).InitAsync(true);
             }
             finally
             {

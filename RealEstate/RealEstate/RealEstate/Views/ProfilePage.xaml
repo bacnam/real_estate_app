@@ -18,7 +18,7 @@
                     <ScrollView.Content>
                         <StackLayout Margin="10,0">
                             <StackLayout Margin="0,10">
-                                <Label Text="Thông tin liên hệ"
+                                <Label Text="Contact information"
                                     FontSize="16" TextColor="#626B70"></Label>
                                 <Frame BackgroundColor="#F5F5F7" HasShadow="False"
                                         Margin="0,10">
@@ -56,13 +56,13 @@
                                 </Frame>
                             </StackLayout>
                             <StackLayout Margin="0,10">
-                                <Label Text="Cài đặt ứng dụng"
+                                <Label Text="Install apps"
                                         TextColor="#626B70" FontSize="16"></Label>
                                 <Frame HasShadow="False"
                                         BorderColor="#E7ECEE">
                                     <StackLayout>
                                         <StackLayout Orientation="Horizontal" HeightRequest="34">
-                                            <Label Text="Quản lý đăng tin"
+                                            <Label Text="Post management"
                                                     HeightRequest="34"
                                                     TextColor="#71828A" FontSize="13"
                                                     VerticalTextAlignment="Center"
@@ -73,7 +73,7 @@
                                             </StackLayout.GestureRecognizers>
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal" HeightRequest="34">
-                                            <Label Text="Danh mục đã lưu"
+                                            <Label Text="Saved categories"
                                                     HeightRequest="34"
                                                     TextColor="#71828A" FontSize="13"
                                                     VerticalTextAlignment="Center"
@@ -84,7 +84,7 @@
                                             </StackLayout.GestureRecognizers>
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal" HeightRequest="34">
-                                            <Label Text="Thông báo"
+                                            <Label Text="Notification"
                                                     HeightRequest="34"
                                                     TextColor="#71828A" FontSize="13"
                                                     VerticalTextAlignment="Center"
@@ -110,13 +110,13 @@
                                 </Frame>
                             </StackLayout>
                             <StackLayout Margin="0,10">
-                                <Label Text="Cài đặt khác"
+                                <Label Text="Other setting"
                                         TextColor="#626B70" FontSize="16"></Label>
                                 <Frame HasShadow="False"
                                         BorderColor="#E7ECEE">
                                     <StackLayout>
                                         <StackLayout Orientation="Horizontal" HeightRequest="34">
-                                            <Label Text="Thông báo từ ứng dụng"
+                                            <Label Text="Notify from app"
                                                     HeightRequest="34"
                                                     TextColor="#71828A" FontSize="13"
                                                     VerticalTextAlignment="Center"
@@ -125,7 +125,7 @@
                                                     IsToggled="True"></Switch>
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal" HeightRequest="34">
-                                            <Label Text="Sử dụng vị trí"
+                                            <Label Text="Use position"
                                                     HeightRequest="34"
                                                     TextColor="#71828A" FontSize="13"
                                                     VerticalTextAlignment="Center"
@@ -141,7 +141,7 @@
                 <Button BorderColor="#F5F5F7" BackgroundColor="White"
                         BorderWidth="1" Margin="10,10" Visual="Default"
                         TextColor="#E25050" FontSize="16" Command="{Binding LogoutCommand}"
-                        Text="Đăng xuất tài khoản"></Button>
+                        Text="Log out"></Button>
             </StackLayout>
             <StackLayout BackgroundColor="Black" Opacity="0.4"
                          AbsoluteLayout.LayoutBounds="0,0,1,1"

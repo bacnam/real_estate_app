@@ -20,7 +20,7 @@ namespace RealEstate.Services
     {
 #if DEBUG
         //public static string URL = "http://192.168.1.148:8080/api/";
-        public static string URL = "http://10.0.0.142:8000/api/";
+        public static string URL = "http://10.0.0.238:8000/api/";
 #else
         public static string URL = "http://34.87.87.77/api/";
 #endif

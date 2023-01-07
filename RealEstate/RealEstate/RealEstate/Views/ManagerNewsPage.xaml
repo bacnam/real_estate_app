@@ -17,7 +17,7 @@
                     <StackLayout Spacing="0" Padding="20,0" BackgroundColor="White">
                         <Label BackgroundColor="White" TextColor="#626B70"
                                 x:Name="lblSale"
-                                Text="Tin bán đã đăng"></Label>
+                                Text="News posted"></Label>
                         <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
                                     x:Name="lineSale"
                                     HorizontalOptions="Start"></BoxView>
@@ -28,7 +28,7 @@
                     <StackLayout Padding="0" Spacing="0">
                         <Label BackgroundColor="White" TextColor="#88969D"
                                 x:Name="lblLease"
-                                Text="Tin cho thuê đã đăng"></Label>
+                                Text="Rental news posted"></Label>
                         <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
                                     IsVisible="False" x:Name="lineLease"
                                     HorizontalOptions="Start"></BoxView>

@@ -29,10 +29,10 @@
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Mức giá"
+                        <Label Grid.Column="0" Text="Price"
                                 VerticalTextAlignment="Start"
                                 TextColor="#626B70" FontSize="16"></Label>
-                        <Label Grid.Column="1" Text="Đơn vị: VND"
+                        <Label Grid.Column="1" Text="Dollar: $"
                                 HorizontalTextAlignment="End"
                                 VerticalTextAlignment="End"
                                 TextColor="#A9A9BA" FontSize="11"></Label>
@@ -64,7 +64,7 @@
                         <ColumnDefinition Width="34"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <StackLayout Grid.Column="0">
-                        <Label Text="Khác" HeightRequest="34"
+                        <Label Text="Khác/More" HeightRequest="34"
                                 VerticalTextAlignment="Center"
                                 TextColor="#1D1D1D" FontSize="14"></Label>
                     </StackLayout>
@@ -90,7 +90,7 @@
                         FontSize="14" x:Name="toPrice"
                         Visual="Material"></Entry>
             </Grid>
-            <Button Text="Lưu lại" FontSize="16" Visual="Default"
+            <Button Text="Save" FontSize="16" Visual="Default"
                     VerticalOptions="EndAndExpand" Margin="10,10,10,10"
                     Clicked="onDone"
                     TextColor="White" BackgroundColor="#FC9261"></Button>

@@ -32,28 +32,28 @@ namespace RealEstate.Services
         {
             var apiService = Xamarin.Forms.DependencyService.Get<IAPIService>();
             LoginRequest request = new LoginRequest(email, password);
-            return apiService.PostAsync<LoginResponse>("accounts/login", request.ToJson());
+            return apiService.PostAsync<LoginResponse>("users/login", request.ToJson());
         }
 
         public Task<LoginResponse> DoLoginFacebookAsync(string token)
         {
             var apiService = Xamarin.Forms.DependencyService.Get<IAPIService>();
             var request = new FacebookLoginRequest(token);
-            return apiService.PostAsync<LoginResponse>("accounts/facebook/login", request.ToJson());
+            return apiService.PostAsync<LoginResponse>("users/facebook/login", request.ToJson());
         }
 
         public Task<LoginResponse> DoLoginGoogleAsync(string token)
         {
             var apiService = Xamarin.Forms.DependencyService.Get<IAPIService>();
             var request = new FacebookLoginRequest(token);
-            return apiService.PostAsync<LoginResponse>("accounts/google/login", request.ToJson());
+            return apiService.PostAsync<LoginResponse>("users/google/login", request.ToJson());
         }
 
         public Task<RegisterResponse> DoRegisterAsync(string email, string password, string fullname, string phoneNumber)
         {
             var apiService = Xamarin.Forms.DependencyService.Get<IAPIService>();
             RegisterRequest request = new RegisterRequest(email, password, fullname, phoneNumber);
-            return apiService.PostAsync<RegisterResponse>("accounts/register", request.ToJson());
+            return apiService.PostAsync<RegisterResponse>("users/register", request.ToJson());
         }
 
         public async Task<GetAccountResponse> GetAccountAsync()
@@ -65,13 +65,14 @@ namespace RealEstate.Services
             string token = await Xamarin.Essentials.SecureStorage.GetAsync("token");
             var apiService = Xamarin.Forms.DependencyService.Get<IAPIService>();
             GetAccountRequest request = new GetAccountRequest(token);
-            return _account = await apiService.PostAsync<GetAccountResponse>("accounts", request.ToJson());
+            _account = await apiService.PostAsync<GetAccountResponse>("users", request.ToJson());
+            return _account;
         }
 
         public async Task LogoutAsync()
         {
             var apiService = Xamarin.Forms.DependencyService.Get<IAPIService>();
-            await apiService.PostAsync<dynamic>("accounts/logout", "");
+            await apiService.PostAsync<dynamic>("users/logout", "");
         }
     }
 }

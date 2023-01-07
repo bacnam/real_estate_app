@@ -15,7 +15,7 @@
                     <StackLayout Spacing="0" Padding="0,0" BackgroundColor="White">
                         <Label BackgroundColor="White" TextColor="#626B70"
                                    x:Name="lblNewsSaved"
-                                   Text="Tin đã lưu"></Label>
+                                   Text="Saved messages"></Label>
                         <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
                                      x:Name="lineNewsSaved"
                                      HorizontalOptions="Start"></BoxView>
@@ -26,7 +26,7 @@
                     <StackLayout Padding="0" Spacing="0">
                         <Label BackgroundColor="White" TextColor="#88969D"
                                    x:Name="lblProjectSaved"
-                                   Text="Dự án đã lưu"></Label>
+                                   Text="Saved project"></Label>
                         <BoxView HeightRequest="4" BackgroundColor="#FC9261" WidthRequest="40"
                                      IsVisible="False" x:Name="lineProjectSaved"
                                      HorizontalOptions="Start"></BoxView>

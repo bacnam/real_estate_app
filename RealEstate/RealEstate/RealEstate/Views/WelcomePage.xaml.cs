@@ -8,7 +8,6 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using RealEstate.ViewModels;
-using RealEstate.Models;
 
 namespace RealEstate.Views
 {

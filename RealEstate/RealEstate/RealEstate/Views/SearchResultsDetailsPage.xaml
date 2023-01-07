@@ -74,7 +74,7 @@
                                 <BoxView HeightRequest="2" Margin="0,10,0,20"
                                             BackgroundColor="#F5F5F7"></BoxView>
                                 <StackLayout Margin="0,5">
-                                    <Label Text="Mô tả" TextColor="#363636" FontSize="14"
+                                    <Label Text="Describe" TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"></Label>
                                     <Label TextColor="#363636" FontSize="12"
                                             Text="{Binding RealData.Description}"></Label>
@@ -82,7 +82,7 @@
                                 <BoxView HeightRequest="1" Margin="0,10,0,10"
                                             BackgroundColor="#F5F5F7"></BoxView>
                                 <StackLayout Margin="0,5">
-                                    <Label Text="Hướng nhà" TextColor="#363636" FontSize="14"
+                                    <Label Text="The direction of the home" TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"></Label>
                                     <Label TextColor="#363636" FontSize="12"
                                             Text="{Binding RealData.Direction}"></Label>
@@ -90,7 +90,7 @@
                                 <BoxView HeightRequest="1" Margin="0,10,0,10"
                                             BackgroundColor="#F5F5F7" Opacity="1"></BoxView>
                                 <StackLayout Margin="0,5">
-                                    <Label Text="Mã số" TextColor="#363636" FontSize="14"
+                                    <Label Text="Number code" TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"></Label>
                                     <Label TextColor="#363636" FontSize="12"
                                             Text="{Binding RealData.Id, StringFormat='#{0}'}"></Label>
@@ -98,7 +98,7 @@
                                 <BoxView HeightRequest="1" Margin="0,10,0,10"
                                             BackgroundColor="#F5F5F7" Opacity="1"></BoxView>
                                 <StackLayout Margin="0,5">
-                                    <Label Text="Dự án" TextColor="#363636" FontSize="14"
+                                    <Label Text="Project" TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"></Label>
                                     <Label TextColor="#363636" FontSize="12"
                                             Text="{Binding RealData.Project}"></Label>
@@ -111,13 +111,13 @@
                                         <ColumnDefinition Width="*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Ngày đăng" TextColor="#363636"
+                                        <Label Text="Date Posted" TextColor="#363636"
                                                 FontSize="14" FontAttributes="Bold"></Label>
                                         <Label Text="{Binding RealData.StartAt, StringFormat='{0:dd/MM/yyyy}'}" FontSize="12"
                                                 TextColor="#363636"></Label>
                                     </StackLayout>
                                     <StackLayout Grid.Column="1">
-                                        <Label Text="Ngày hết hạn" TextColor="#363636"
+                                        <Label Text="End day" TextColor="#363636"
                                                 HorizontalTextAlignment="End"
                                                 FontSize="14" FontAttributes="Bold"></Label>
                                         <Label Text="{Binding RealData.EndAt, StringFormat='{0:dd/MM/yyyy}'}" FontSize="12"

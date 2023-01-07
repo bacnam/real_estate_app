@@ -5,7 +5,7 @@ using MySql.EntityFrameworkCore.DataAnnotations;
 
 namespace RealEstate.WebService.Models
 {
-    [Table("batdongsan")]
+    [Table("real_estates")]
     [MySqlCharset("utf8")]
     public class RealEstateModel : BaseModel
     {

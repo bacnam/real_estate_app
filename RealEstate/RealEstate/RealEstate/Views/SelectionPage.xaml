@@ -27,7 +27,7 @@
                             TextColor="#1A8DFF"
                             FontSize="14" Margin="0"
                             FontAttributes="Bold" Clicked="onDone" IsVisible="{Binding IsMultiple}"
-                            HorizontalOptions="End" Text="Xong"></Button>
+                            HorizontalOptions="End" Text="Done"></Button>
                 </Grid>
                 <renderers:NoBorderEntry AbsoluteLayout.LayoutFlags="All"
                                          AbsoluteLayout.LayoutBounds="1,1,1,1"
@@ -35,7 +35,7 @@
                                          Margin="10,0"
                                          Text="{Binding Search}"
                                          BackgroundColor="#F6F6F6"
-                                         Placeholder="Tìm kiếm..."></renderers:NoBorderEntry>
+                                         Placeholder="Finding..."></renderers:NoBorderEntry>
                 <CollectionView ItemsSource="{Binding Selections}"
                                 SelectionChanged="collectionView_SelectionChanged"
                                 SelectionMode="{Binding SelectionMode}">
@@ -62,7 +62,7 @@
                     <CollectionView.EmptyView>
                         <StackLayout>
                             <Label Margin="0,20"
-                                   Text="Không tìm thấy kết quả"
+                                   Text="No result"
                                    HorizontalTextAlignment="Center"
                                    VerticalTextAlignment="Center"></Label>
                         </StackLayout>

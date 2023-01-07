@@ -25,10 +25,10 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="Diện tích"
+                    <Label Grid.Column="0" Text="Area"
                            VerticalTextAlignment="Start"
                            TextColor="#626B70" FontSize="16"></Label>
-                    <Label Grid.Column="1" Text="Đơn vị: m2"
+                    <Label Grid.Column="1" Text="Unit: m2"
                            HorizontalTextAlignment="End"
                            VerticalTextAlignment="End"
                            TextColor="#A9A9BA" FontSize="11"></Label>
@@ -38,12 +38,12 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Entry Grid.Column="0" Placeholder="Từ"
+                    <Entry Grid.Column="0" Placeholder="From"
                            PlaceholderColor="#A9A9BA"
                            TextColor="#1D1D1D" Keyboard="Numeric"
                            FontSize="14" x:Name="fromAcreage"
                            Visual="Material"></Entry>
-                    <Entry Grid.Column="1" Placeholder="Đến"
+                    <Entry Grid.Column="1" Placeholder="To"
                            PlaceholderColor="#A9A9BA"
                            TextColor="#1D1D1D" Keyboard="Numeric"
                            FontSize="14" x:Name="toAcreage"

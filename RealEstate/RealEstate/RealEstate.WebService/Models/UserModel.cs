@@ -22,17 +22,17 @@ namespace RealEstate.WebService.Models
         public string PhoneNumber { get; set; }
 
         [Column(TypeName = "varchar(255)")]
-        public string Token { get; set; }
+        public string? Token { get; set; }
 
         [Column(TypeName = "varchar(255)")]
-        public string FacebookId { get; set; }
+        public string? FacebookId { get; set; }
 
         [Column(TypeName = "varchar(255)")]
-        public string GoogleId { get; set; }
+        public string? GoogleId { get; set; }
 
-        public ICollection<AccountRealEstateModel> AccountRealNews { get; set; }
+        public ICollection<AccountRealEstateModel>? AccountRealNews { get; set; }
 
-        public ICollection<AccountProjectModel> AccountProjects { get; set; }
+        public ICollection<AccountProjectModel>? AccountProjects { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DataType(DataType.DateTime)]

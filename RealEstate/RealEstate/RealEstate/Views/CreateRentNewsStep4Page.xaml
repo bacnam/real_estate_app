@@ -56,19 +56,19 @@
                                             Text="{Binding RentNews.FullAddress}"></Label>
                                 </Grid>
                                 <StackLayout Margin="0,5">
-                                    <Label Text="Mô tả" TextColor="#363636" FontSize="14"
+                                    <Label Text="Describe" TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"></Label>
                                     <Label TextColor="#363636" FontSize="12"
                                             Text="{Binding RentNews.Desciption}"></Label>
                                 </StackLayout>
                                 <StackLayout Margin="0,5">
-                                    <Label Text="Hướng nhà" TextColor="#363636" FontSize="14"
+                                    <Label Text="The direction of the home" TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"></Label>
                                     <Label TextColor="#363636" FontSize="12"
                                             Text="{Binding RentNews.Direction.Name}"></Label>
                                 </StackLayout>
                                 <StackLayout Margin="0,5">
-                                    <Label Text="Dự án" TextColor="#363636" FontSize="14"
+                                    <Label Text="Project" TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"></Label>
                                     <Label TextColor="#363636" FontSize="12"
                                             Text="{Binding RentNews.Project.Name}"></Label>
@@ -79,13 +79,13 @@
                                         <ColumnDefinition Width="*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Ngày đăng" TextColor="#363636"
+                                        <Label Text="Date posted" TextColor="#363636"
                                                 FontSize="14" FontAttributes="Bold"></Label>
                                         <Label Text="{Binding RentNews.StartDate, StringFormat='{0:dd-MM-yyyy}'}" FontSize="12"
                                                 TextColor="#363636"></Label>
                                     </StackLayout>
                                     <StackLayout Grid.Column="1">
-                                        <Label Text="Ngày hết hạn" TextColor="#363636"
+                                        <Label Text="End date" TextColor="#363636"
                                                 HorizontalTextAlignment="End"
                                                 FontSize="14" FontAttributes="Bold"></Label>
                                         <Label Text="{Binding RentNews.StartDate, StringFormat='{0:dd-MM-yyyy}'}" FontSize="12"
@@ -94,7 +94,7 @@
                                     </StackLayout>
                                 </Grid>
                                 <StackLayout Margin="0,5">
-                                    <Label Text="Liên hệ" TextColor="#363636" FontSize="14"
+                                    <Label Text="Contact" TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"></Label>
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -123,7 +123,7 @@
                         </StackLayout>
                     </ScrollView.Content>
                 </ScrollView>
-                <Button Text="Hoàn tất" TextColor="White" Clicked="onDone"
+                <Button Text="Finsh" TextColor="White" Clicked="onDone"
                         BackgroundColor="#FC9261" Margin="10"></Button>
             </renderers:KeyboardView>
             <Grid ColumnSpacing="0" RowSpacing="0"

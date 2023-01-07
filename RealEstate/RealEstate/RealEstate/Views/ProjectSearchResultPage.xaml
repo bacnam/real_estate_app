@@ -40,7 +40,7 @@
                                         <RowDefinition Height="4"></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
-                                            Text="Tìm kiếm dự án" TextColor="#626B70" FontSize="16"></Label>
+                                            Text="Project finding" TextColor="#626B70" FontSize="16"></Label>
                                     <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1"
                                                 HeightRequest="2" BackgroundColor="#FC9261"></BoxView>
                                 </Grid>
@@ -50,7 +50,7 @@
                                         <ColumnDefinition Width="*"></ColumnDefinition>
                                         <ColumnDefinition Width="44"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding ProjectCount, StringFormat='{0} kết quả'}"
+                                    <Label Grid.Column="0" Text="{Binding ProjectCount, StringFormat='{0} result'}"
                                             TextColor="#363636" FontSize="14"
                                             FontAttributes="Bold"
                                             VerticalTextAlignment="Center"

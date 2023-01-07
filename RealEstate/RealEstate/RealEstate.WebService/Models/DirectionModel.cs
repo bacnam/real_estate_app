@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RealEstate.WebService.Models
 {
-    [Table("huong")]
+    [Table("directions")]
     [MySqlCharset("utf8")]
     public class DirectionModel : BaseModel
     {

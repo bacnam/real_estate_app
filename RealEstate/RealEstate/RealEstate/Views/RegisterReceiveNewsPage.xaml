@@ -37,7 +37,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Loại nhà đất" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="Type of home" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RegisterNews.RealType.Title}"
                                                 TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
@@ -54,7 +54,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Tỉnh/Thành phố" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="City" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RegisterNews.City.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -70,7 +70,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Quận/huyện" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="State" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RegisterNews.District.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -86,7 +86,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Xã/phường" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="Country" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RegisterNews.Ward.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -118,7 +118,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Hướng nhà" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="The direction of the home" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RegisterNews.Direction.Name}" TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>
                                     <Image Grid.Column="1" Margin="5" Source="arrow-back"></Image>
@@ -134,7 +134,7 @@
                                         <ColumnDefinition Width="34"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
-                                        <Label Text="Mức giá" TextColor="#A9A9BA" FontSize="10"></Label>
+                                        <Label Text="Price" TextColor="#A9A9BA" FontSize="10"></Label>
                                         <Label Text="{Binding RegisterNews.Price.Name}"
                                                TextColor="#1D1D1D" FontSize="14"></Label>
                                     </StackLayout>

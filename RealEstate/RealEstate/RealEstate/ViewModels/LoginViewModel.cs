@@ -11,6 +11,8 @@ namespace RealEstate.ViewModels
     {
         public LoginViewModel()
         {
+            Email = "baonguyen@gmail.com";
+            Password = "baonguyen";
         }
 
         public Action LoginSuccess;

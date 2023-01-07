@@ -15,19 +15,22 @@
                 </Grid.RowDefinitions>
                 <ImageButton Grid.Column="0" Padding="0"
                              Clicked="onBack" Margin="0"
+                             BackgroundColor="Transparent"
                              WidthRequest="40" Source="back"
                              HorizontalOptions="Start" VerticalOptions="Center"></ImageButton>
             </Grid>
-            <StackLayout HeightRequest="568" VerticalOptions="CenterAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand">
                 <AbsoluteLayout BackgroundColor="White">
                     <Image Source="flow" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1"></Image>
-                    <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
-                        <Image Source="logo" Margin="0,30,0,0" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"></Image>
+                    <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="CenterAndExpand">
+                        <Image VerticalOptions="Center" WidthRequest="200" Source="logo" Margin="0,30,0,0"></Image>
                     </StackLayout>
                     <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
                         <StackLayout VerticalOptions="EndAndExpand">
-                            <Label Text="Đăng nhập" TextColor="#1D262C" Margin="0,0,0,20" FontSize="Header" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-                            <Label Text="Đăng nhập để sử dụng dịch vụ" Margin="0,0,0,30" TextColor="#71828A" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                            <Label Text="Sign in" TextColor="#1D262C" Margin="0,0,0,20" FontSize="Header" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                            <Label Text="Login to use the service" Margin="0,0,0,30" TextColor="#71828A" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
                         </StackLayout>
                     </StackLayout>
                 </AbsoluteLayout>
@@ -43,6 +46,9 @@
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                             <ColumnDefinition Width="5*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="44"></RowDefinition>
+                        </Grid.RowDefinitions>
                         <Grid Grid.Column="0">
                             <Grid ColumnSpacing="0" HorizontalOptions="Start">
                                 <Grid.ColumnDefinitions>
@@ -50,15 +56,15 @@
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <CheckBox IsChecked="True" Color="#6487FE" Grid.Column="0"></CheckBox>
-                                <Label Text="Nhớ mật khẩu" TextColor="#1D262C" LineHeight="2" FontSize="Small" Grid.Column="1"></Label>
+                                <Label Text="Remember password" TextColor="#6487FE" LineHeight="2" FontSize="Small" Grid.Column="1"></Label>
                             </Grid>
                         </Grid>
-                        <Button Grid.Column="1" Text="Quên mật khẩu" TextColor="#1D262C" HorizontalOptions="End"></Button>
+                        <Button Grid.Column="1" Text="Forgot password" TextColor="White"></Button>
                     </Grid>
-                    <Button Text="Đăng nhập" TextColor="White"
+                    <Button Text="Sign in" TextColor="White"
                             Command="{Binding LoginCommand, Mode=TwoWay}" HeightRequest="44"
                             BackgroundColor="#FC9261" Margin="0,20,0,0"></Button>
-                    <Button Text="Đăng ký tài khoản mới" BackgroundColor="White"
+                    <Button Text="Sign up" BackgroundColor="White"
                             Clicked="onRegister"
                             TextColor="#1D262C"></Button>
                 </renderers:KeyboardView>

@@ -202,6 +202,7 @@ resources;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\o
 resources;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\71\jl\res\values\strings.xml
 resources;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\71\jl\res\values\styles.xml
 resources;obj\Debug\120\res\values\colors.xml
+resources;obj\Debug\120\res\values\strings.xml
 resources;obj\Debug\120\res\values\styles.xml
 scale;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\70\jl\res\drawable\materialprogressbar.xml
 selector;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\63\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
@@ -338,6 +339,7 @@ string;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\
 string;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\66\jl\res\values-zh-rTW\values-zh-rTW.xml
 string;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\67\jl\res\values\values.xml
 string;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\71\jl\res\values\strings.xml
+string;obj\Debug\120\res\values\strings.xml
 style;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\63\jl\res\values\values.xml
 style;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\66\jl\res\values\values.xml
 style;C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.Android\obj\Debug\120\lp\67\jl\res\values\values.xml

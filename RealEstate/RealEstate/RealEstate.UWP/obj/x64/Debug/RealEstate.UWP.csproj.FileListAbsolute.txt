@@ -1,0 +1,11 @@
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\RealEstate.UWP.csproj.AssemblyReference.cache
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\App.g.i.cs
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\App.g.cs
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\MainPage.g.i.cs
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\MainPage.g.cs
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\App.xaml
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\MainPage.xaml
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\App.xbf
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\MainPage.xbf
+C:\Projects\real_estate_app\RealEstate\RealEstate\RealEstate.UWP\obj\x64\Debug\XamlSaveStateFile.xml

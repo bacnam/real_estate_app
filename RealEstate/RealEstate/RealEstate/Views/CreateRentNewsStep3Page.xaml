@@ -46,19 +46,19 @@
             <ScrollView >
                 <ScrollView.Content>
                     <StackLayout Padding="10,0" Spacing="10">
-                        <Label  Text="Thông tin liên hệ"
+                        <Label  Text="Contact information"
                                 Margin="0,0,0,10"
                                 TextColor="#626B70" FontSize="16"></Label>
                         <Entry  TextColor="#363636" FontSize="14"
                                 BackgroundColor="#F6F6F6" Keyboard="Text"
                                 PlaceholderColor="#A9A9BA"
                                 Text="{Binding RentNews.ContactName}"
-                                Placeholder="Tên liên hệ"></Entry>
+                                Placeholder="Name"></Entry>
                         <Entry  TextColor="#363636" FontSize="14"
                                 PlaceholderColor="#A9A9BA"
                                 BackgroundColor="#F6F6F6" Keyboard="Telephone"
                                 Text="{Binding RentNews.ContactPhone}"
-                                Placeholder="Di động"></Entry>
+                                Placeholder="Phone number"></Entry>
                         <Grid ColumnSpacing="10" RowSpacing="0" Padding="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -66,7 +66,7 @@
                             </Grid.ColumnDefinitions>
                             <StackLayout Grid.Column="0" BackgroundColor="#F6F6F6"
                                             Spacing="0" Padding="0" HeightRequest="65">
-                                <Label Text="Ngày bắt đầu" TextColor="#A9A9BA"
+                                <Label Text="Beginning date" TextColor="#A9A9BA"
                                         FontSize="10"
                                         Margin="15,10,0,0"></Label>
                                 <AbsoluteLayout Padding="0">
@@ -85,7 +85,7 @@
                             </StackLayout>
                             <StackLayout Grid.Column="1" BackgroundColor="#F6F6F6"
                                             Spacing="0" HeightRequest="65">
-                                <Label Text="Ngày kết thúc" TextColor="#A9A9BA"
+                                <Label Text="Ending date" TextColor="#A9A9BA"
                                         FontSize="10"
                                         Margin="15,10,0,0"></Label>
                                 <AbsoluteLayout Padding="0">
@@ -106,7 +106,7 @@
                     </StackLayout>
                 </ScrollView.Content>
             </ScrollView>
-            <Button Text="Xem trước tin đăng" TextColor="White"
+            <Button Text="Post review" TextColor="White"
                     Margin="10,20,10,10" VerticalOptions="EndAndExpand"
                     Clicked="onContinute" Visual="Default"
                     BackgroundColor="#FC9261"

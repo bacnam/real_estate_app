@@ -19,3 +19,13 @@ G:\HoaPhuongHome\DownloadFromMac\HoaPhuongHome\SegmentedControl\SegmentedControl
 G:\HoaPhuongHome\DownloadFromMac\HoaPhuongHome\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\XamlC.stamp
 G:\HoaPhuongHome\DownloadFromMac\HoaPhuongHome\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.dll
 G:\HoaPhuongHome\DownloadFromMac\HoaPhuongHome\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.pdb
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\bin\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.deps.json
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\bin\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.dll
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\bin\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.pdb
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.csproj.AssemblyReference.cache
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.AssemblyInfoInputs.cache
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.AssemblyInfo.cs
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.csproj.CoreCompileInputs.cache
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.dll
+C:\Projects\real_estate_app\RealEstate\SegmentedControl\SegmentedControl.FormsPlugin.Abstractions\obj\Debug\netstandard2.0\SegmentedControl.FormsPlugin.Abstractions.pdb
